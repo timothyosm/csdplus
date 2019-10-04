@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<style>
+button {
+  position: relative;
+  background-color: #448896;
+  border: none;
+  font-size: 10px;
+  padding: 5px;
+  color: #FFFFFF;
+  width: 100%;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+button:after {
+  content: "";
+  background: #E9F0FE;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px!important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+    h3 {
+
+        border: none;
+        color: white;
+        font-size: 16px;
+        margin: auto;
+        padding: 5px;
+        text-align: center;
+
+    }
+</style>
+
+<body style="background-color: #123E52">
+    <h3>Incidents</h3>
+    <button id='iReply'>No Contact</button>
+    <p></p>
+    <button id='iCall'>Message Left</button>
+    <p></p>
+    <button id='iDb'>DB request</button>
+    <h3>Requests</h3>
+    <button id='rReply'>No Contact</button>
+    <p></p>
+    <button id='rCall'>Message Left</button>
+    <p></p>
+    <button id='rDb'>DB request</button>
+
+    <script src="background.js"></script>
+    <script src="style.css"></script>
+    <p style='color: white; text-align: center; font-weight: bold;'>Clicking will Clear your Clipboard with the stored message!</p>
+</body>
+
+</html>
