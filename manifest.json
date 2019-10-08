@@ -9,7 +9,7 @@
   "background": {
     "scripts": [
       "background.js",
-      "csschanges.js"
+      "search.js"
     ],
     "persistent": true
   },
@@ -19,7 +19,8 @@
   },
   "permissions": [
     "activeTab",
-    "storage"
+    "storage",
+    "tabs"
   ],
   "content_scripts": [
     {
@@ -27,7 +28,8 @@
         "https://servicedesk.civica.co.uk/*"
       ],
       "js": [
-        "csschanges.js"
+        "csschanges.js",
+        "search.js"
       ],
       "css": [
         "style.css"
