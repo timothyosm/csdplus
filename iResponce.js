@@ -12,32 +12,26 @@
     } else {
         var customerName1 = document.getElementById('mainForm-_RaisedUserTitle').value;
         var customerName = customerName1.split(" ")[0];
-        var yourName = document.getElementById('mainForm-_CreateUserDisplay').value;
+        var yourName = document.getElementById('mainForm-CreationUserTitleDisplay').value;
         var ticket = document.getElementById('mainForm-_ProcessRef').innerHTML;
     }
-
-
-
-    var timeToReturn = new Date();
-    timeToReturn.setMilliseconds(Math.round(timeToReturn.getMilliseconds() / 1000) * 1000);
-    timeToReturn.setSeconds(Math.round(timeToReturn.getSeconds() / 60) * 60);
-    timeToReturn.setMinutes(Math.round(timeToReturn.getMinutes() / 15) * 15);
     var reply = 'Hello ' + customerName + ',\n'
         + '\n'
-        + 'We tried to call around the below time and date but could not get through, could you please return our call on 1300 550 062 and quote ticket number ' + ticket + '\n'
-        + '\n'
-        + 'Attempted call: \n'
-        + '\n'
-        + timeToReturn
-        + '\n'
+        + 'This Ticket is now under investigation. if you have any further information that could assist in the resolution of this issue please update the ticket or contact the service desk. ' + '\n'
         + '\n'
         + 'Kind Regards,\n'
-        + yourName
+        + yourName;
     console.log(reply)
-    //  document.getElementById('mainForm-Details_editor').contentWindow.document.write(reply)
     var dummy = document.createElement("textarea");
     document.body.appendChild(dummy);
     dummy.value = reply;
     dummy.select();
     document.execCommand("copy");
+    console.log(customerName);
+    console.log(yourName);
+    console.log(reply);
+
 })();
+
+
+

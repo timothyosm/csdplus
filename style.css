@@ -1,5 +1,11 @@
+#mainForm-Description2ReadOnly {
+  height: 1000px !important; 
+}
+
 #mainForm-DescriptionReadOnly {
-    height:2000px
-  }
-  
-  
+  height: 1000px !important;
+}
+
+#mainForm-Description5ReadOnly {
+  height: 1000px !important;
+}

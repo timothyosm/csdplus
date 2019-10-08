@@ -2,14 +2,15 @@
 
 (function () {
 
-    var element = document.getElementById("mainForm-UserTitleDisplay");
-
+    var element = document.getElementById("mainForm-CreationUserTitleDisplay");
+    // incident
     if (typeof (element) != 'undefined' && element != null) {
         var customerName1 = document.getElementById('mainForm-_RaisedUserTitle').value;
         var customerName = customerName1.split(" ")[0];
-        var yourName = document.getElementById('mainForm-UserTitleDisplay').value;
+        var yourName = document.getElementById('mainForm-CreationUserTitleDisplay').value;
         var ticket = document.getElementById('mainForm-_ProcessRef').innerHTML;
     } else {
+        //request
         var customerName1 = document.getElementById('mainForm-_RaisedUserTitle').value;
         var customerName = customerName1.split(" ")[0];
         var yourName = document.getElementById('mainForm-_CreateUserDisplay').value;
@@ -24,17 +25,10 @@
     timeToReturn.setMinutes(Math.round(timeToReturn.getMinutes() / 15) * 15);
     var reply = 'Hello ' + customerName + ',\n'
         + '\n'
-        + 'We tried to call around the below time and date but could not get through, could you please return our call on 1300 550 062 and quote ticket number ' + ticket + '\n'
-        + '\n'
-        + 'Attempted call: \n'
-        + '\n'
-        + timeToReturn
-        + '\n'
+        + 'Please be aware that ticket: '+ ticket + ' has been referred to the Development team. We will send you an update as soon as possible.' +'\n'
         + '\n'
         + 'Kind Regards,\n'
         + yourName
-    console.log(reply)
-    //  document.getElementById('mainForm-Details_editor').contentWindow.document.write(reply)
     var dummy = document.createElement("textarea");
     document.body.appendChild(dummy);
     dummy.value = reply;

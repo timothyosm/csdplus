@@ -2,8 +2,36 @@
 
 (function () {
 
-    var customerName = document.getElementById('mainForm-_RaisedUserTitle').value;
-    var yourName = document.getElementById('mainForm-UserTitleDisplay').value;
+    
+    var element = document.getElementById('mainForm-DescriptionReadOnly');
+
+    if (typeof (element) != 'undefined' && element != null) {
+        document.getElementById('mainForm-DescriptionReadOnly').style.height = "2000px"
+    }
+    var element1 = document.getElementById('dashboard-column-1')
+    if (typeof (element1) != 'undefined' && element1 != null) {
+        document.getElementById('dashboard-column-1').style.position = "relative"
+    }
+
+    var element2 = document.getElementById('mainForm-Description2ReadOnly')
+    if (typeof (element2) != 'undefined' && element2 != null) {
+        document.getElementById('mainForm-Description2ReadOnly').style.height = "2000px"
+    }
+
+
+    var element = document.getElementById("mainForm-UserTitleDisplay");
+
+    if (typeof (element) != 'undefined' && element != null) {
+        var customerName1 = document.getElementById('mainForm-_RaisedUserTitle').value;
+        var customerName = customerName1.split(" ")[0];
+        var yourName = document.getElementById('mainForm-UserTitleDisplay').value;
+        var ticket = document.getElementById('mainForm-_ProcessRef').innerHTML;
+    } else {
+        var customerName1 = document.getElementById('mainForm-_RaisedUserTitle').value;
+        var customerName = customerName1.split(" ")[0];
+        var yourName = document.getElementById('mainForm-_CreateUserDisplay').value;
+        var ticket = document.getElementById('mainForm-_ProcessRef').innerHTML;
+    }
     var reply = 'Hello ' + customerName + ',\n'
         + '\n'
         + 'As i havent heard from you in a while, i will close this ticket off. If this issue is not resolved or you need help with anything else please get in contact with us using the below information.\n'

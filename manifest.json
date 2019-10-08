@@ -1,12 +1,15 @@
 {
   "name": "CSD+",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "manifest_version": 2,
   "description": "Fixin' Things",
-  "icons": { "16": "tt-01.png"},
+  "icons": {
+    "16": "tt-01.png"
+  },
   "background": {
     "scripts": [
-      "background.js"
+      "background.js",
+      "csschanges.js"
     ],
     "persistent": true
   },
@@ -15,15 +18,23 @@
     "default_popup": "popup.html"
   },
   "permissions": [
-    "https://*/*",
-    "http://*/*",
-    "tabs"
+    "activeTab",
+    "storage"
   ],
   "content_scripts": [
     {
-      "matches": ["<all_urls>"], 
-      "css" : ["style.css"]
+      "matches": [
+        "https://servicedesk.civica.co.uk/*"
+      ],
+      "js": [
+        "csschanges.js"
+      ],
+      "css": [
+        "style.css"
+      ]
     }
-]
-
+  ],
+  "web_accessible_resources": [
+    "style.css"
+  ]
 }
