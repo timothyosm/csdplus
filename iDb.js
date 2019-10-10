@@ -20,7 +20,7 @@
         '\n' +
         'https://sftp.civicaeducation.com.au/filedrop/educationsupport@civica.com.au\n' +
         '\n' +
-        'Please zip the schema, format and license files. And put ticket number(' + ticket + ') in the email subject.\n' +
+        'Please zip the schema, format and license files. And put ticket number( ' + ticket + ' ) in the email subject.\n' +
         '\n' +
         'Kind Regards,\n' +
         yourName;

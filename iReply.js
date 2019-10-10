@@ -31,9 +31,9 @@
     }
     var reply = 'Hello ' + customerName + ',\n'
         + '\n'
-        + 'As i havent heard from you in a while, i will close this ticket off. If this issue is not resolved or you need help with anything else please get in contact with us using the below information.\n'
+        + "As I haven't heard from you in a while, I will close this ticket off. If this issue is not resolved or you need help with anything else please get in contact with us using the below information.\n"
         + '\n'
-        + '- Log a ticket though the CSD https://civicaeducation.com.au/support/online-support-portal/\n'
+        + '-Log a ticket though the CSD https://civicaeducation.com.au/support/online-support-portal/\n'
         + '\n'
         + '-Email details of your problem to educationsupport@civica.com.au with attached screenshots, if relevant\n'
         + '\n'
