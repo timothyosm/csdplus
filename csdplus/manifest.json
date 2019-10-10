@@ -1,6 +1,6 @@
 {
   "name": "CSD+",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "manifest_version": 2,
   "description": "Fixin' Things",
   "icons": {
@@ -8,13 +8,12 @@
   },
   "background": {
     "scripts": [
-      "background.js",
-      "search.js"
+      "background.js"
     ],
     "persistent": true
   },
   "browser_action": {
-    "default_title": "Inject!",
+    "default_title": "Fixin' Things",
     "default_popup": "popup.html"
   },
   "permissions": [

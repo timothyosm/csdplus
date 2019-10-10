@@ -22,7 +22,7 @@
     box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
     transition: all 0.4s ease 0s;
     width: 100px;
-cursor: pointer;
+    cursor: pointer;
   }
 
   body {
@@ -37,6 +37,11 @@ cursor: pointer;
   }
 
   #ticketInput {
+    margin: auto;
+    width: 138px;
+  }
+
+  #ticketInputpr {
     margin: auto;
     width: 138px;
   }
@@ -56,18 +61,19 @@ cursor: pointer;
   <p></p>
   <div id="iResponce" class="button_cont" align="center"><a class="example_a">Initial Responce</a></div>
   <p></p>
-  <p></p>
-  <p></p>
-  <p></p>
   <div>
     <p style='color: white; text-align: center; font-weight: bold;'>Search Tickets</p>
     <input id="ticketInput" type="text" value="" />
     <p></p>
     <div id="submit" class="button_cont" align="center"><a class="example_a">Search</a></div>
     <p></p>
+    <p style='color: white; text-align: center; font-weight: bold;'>Search PR by Description</p>
+    <input id="ticketInputpr" type="text" value="" />
     <p></p>
+    <div id="submitpr" class="button_cont" align="center"><a class="example_a">Search</a></div>
     <p></p>
   </div>
+  
   <script src="background.js"></script>
 
 
