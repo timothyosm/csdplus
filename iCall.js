@@ -1,9 +1,7 @@
 // this is the code which will be injected into a given page...
 
 (function () {
-
     var element = document.getElementById("mainForm-UserTitleDisplay");
-
     if (typeof (element) != 'undefined' && element != null) {
         var customerName1 = document.getElementById('mainForm-_RaisedUserTitle').value;
         var customerName = customerName1.split(" ")[0];
@@ -15,9 +13,6 @@
         var yourName = document.getElementById('mainForm-_CreateUserDisplay').value;
         var ticket = document.getElementById('mainForm-_ProcessRef').innerHTML;
     }
-
-
-
     var timeToReturn = new Date();
     timeToReturn.setMilliseconds(Math.round(timeToReturn.getMilliseconds() / 1000) * 1000);
     timeToReturn.setSeconds(Math.round(timeToReturn.getSeconds() / 60) * 60);
@@ -33,8 +28,6 @@
         + '\n'
         + 'Kind Regards,\n'
         + yourName
-    console.log(reply)
-    //  document.getElementById('mainForm-Details_editor').contentWindow.document.write(reply)
     var dummy = document.createElement("textarea");
     document.body.appendChild(dummy);
     dummy.value = reply;

@@ -17,10 +17,7 @@
     if (typeof (element2) != 'undefined' && element2 != null) {
         document.getElementById('mainForm-Description2ReadOnly').style.height = "2000px"
     }
-
-
     var element = document.getElementById("mainForm-UserTitleDisplay");
-
     if (typeof (element) != 'undefined' && element != null) {
         var customerName1 = document.getElementById('mainForm-_RaisedUserTitle').value;
         var customerName = customerName1.split(" ")[0];
@@ -44,14 +41,10 @@
         + '\n'
         + 'Kind Regards,\n'
         + yourName;
-    console.log(reply)
     var dummy = document.createElement("textarea");
     document.body.appendChild(dummy);
     dummy.value = reply;
     dummy.select();
     document.execCommand("copy");
-    console.log(customerName);
-    console.log(yourName);
-    console.log(reply);
 
 })();

@@ -21,15 +21,11 @@
         + '\n'
         + 'Kind Regards,\n'
         + yourName;
-    console.log(reply)
     var dummy = document.createElement("textarea");
     document.body.appendChild(dummy);
     dummy.value = reply;
     dummy.select();
     document.execCommand("copy");
-    console.log(customerName);
-    console.log(yourName);
-    console.log(reply);
 
 })();
 

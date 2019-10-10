@@ -16,9 +16,6 @@
         var yourName = document.getElementById('mainForm-_CreateUserDisplay').value;
         var ticket = document.getElementById('mainForm-_ProcessRef').innerHTML;
     }
-
-
-
     var timeToReturn = new Date();
     timeToReturn.setMilliseconds(Math.round(timeToReturn.getMilliseconds() / 1000) * 1000);
     timeToReturn.setSeconds(Math.round(timeToReturn.getSeconds() / 60) * 60);

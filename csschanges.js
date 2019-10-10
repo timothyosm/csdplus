@@ -9,7 +9,8 @@
         var timewaste = localStorage.getItem('timeWasted')
         var title3 = document.getElementById('contentTitle').textContent;
         var result = title3.match(/[0-9]+/g);
-        document.title = result;
+        var orga = document.getElementById('mainForm-_OrganisationDisplay').value;
+        document.title = result + " - " + orga;
         var title2 = document.getElementById('contentTitle').textContent;
         document.getElementById('contentTitle').innerHTML = title2 + '- Load Time: ' + timewaste / 1000.0 + ' seconds.';
         var style = document.createElement('link');
