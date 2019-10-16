@@ -17,9 +17,21 @@
 }
 
 #mainForm-Description5ReadOnly {
-  height: 800px !important;
+  height: 1000px !important;
   -webkit-user-select: auto !important;
 
+}
+
+#mainForm-Details_editor {
+	height: 600px !important;
+	-webkit-user-select: auto !important;
+  
+}
+
+#mainForm-_HistoryDetailsReadOnly{
+	height: 1000px !important;
+	-webkit-user-select: auto !important;
+  
 }
 
 .dashboardGadgetHeader {
@@ -54,12 +66,3 @@ div {
 	border-bottom-left-radius: 0px !important; 
 }
 
-#control-wrapper-mainForm-GroupBox6 div{
-	display: none !important; 
-	
-}
-
-#mainForm-GroupBox6 div{
-	display: none !important; 
-	
-}
