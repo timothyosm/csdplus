@@ -1,6 +1,6 @@
 {
   "name": "CSD+",
-  "version": "0.1.5",
+  "version": "0.1.7",
   "manifest_version": 2,
   "description": "Fixin' Things",
   "icons": {
@@ -9,6 +9,7 @@
   "background": {
     "scripts": [
       "background.js"
+
     ],
     "persistent": true
   },
@@ -18,7 +19,6 @@
   },
   "permissions": [
     "activeTab",
-    "storage",
     "tabs"
   ],
   "content_scripts": [
@@ -26,8 +26,10 @@
       "matches": [
         "https://servicedesk.civica.co.uk/*"
       ],
+      "run_at": "document_idle",
       "js": [
-        "csschanges.js"
+        "csschanges.js",
+        "highlight.js"
       ],
       "css": [
         "style.css"

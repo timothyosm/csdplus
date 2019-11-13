@@ -1,5 +1,10 @@
+document.addEventListener('DOMContentLoaded', function() {
+	chrome.tabs.executeScript(null, { file: 'highlight.js' });
+  });
+
 function injectTheScript() {
 	chrome.tabs.executeScript(null, { file: 'iReply.js' });
+	csschanges()
 };
 function injectTheScript1() {
 	chrome.tabs.executeScript(null, { file: 'iCall.js' });
@@ -10,6 +15,8 @@ function injectTheScript2() {
 function csschanges() {
 	chrome.tabs.executeScript(null, { file: 'csschanges.js' });
 };
+
+
 function injectTheScript3() {
 	chrome.tabs.executeScript(null, { file: 'iDev.js' });
 };
@@ -24,6 +31,9 @@ document.getElementById('iResponce').addEventListener('click', injectTheScript4)
 document.getElementById('submit').addEventListener('click', injectTheScript5);
 document.getElementById('submitpr').addEventListener('click', injectTheScript6);
 document.getElementById('submitclosed').addEventListener('click', injectTheScript7);
+
+
+
 
 function injectTheScript5() {
 
