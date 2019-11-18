@@ -1,28 +1,68 @@
-document.addEventListener('DOMContentLoaded', function() {
+let localstorageTeam = localStorage.getItem('team');
+console.log(localstorageTeam)
+document.getElementById('team').value=localstorageTeam;
+
+function saveteam() {
+	let team = document.querySelector("#team").value;
+	localStorage.setItem('team', JSON.stringify(team));
+let retrievedTeam = localStorage.getItem('team');
+
+	if (retrievedTeam == '"Edu"') {
+		document.getElementById('content').innerHTML =
+			"<div id='iReply' class='button_cont' align='center'><a class='example_a'> No Contact </a></div><p></p><div id='iCall' class='button_cont' align='center'><a class='example_a'>Message Left</a></div><p></p><div id='iDb' class='button_cont' align='center'><a class='example_a'> DB request </a></div><p></p><div id='iDev' class='button_cont' align='center'><a class='example_a'>Sent to Dev </a></div><p></p><div id='iResponce' class='button_cont' align='center'><a class='example_a'>Initial Responce</a></div>"
+	} else if (retrievedTeam == '"Lib"') {
+		document.getElementById('content').innerHTML = "<p id='notice'>Email Timothy Osmond for any replies you want added</p>"
+	} else if (retrievedTeam == '"LG"') {
+		document.getElementById('content').innerHTML = "<p id='notice'>Email Timothy Osmond for any replies you want added</p>"
+	} else if (retrievedTeam == '"Jus"') {
+		document.getElementById('content').innerHTML = "<p id='notice'>Email Timothy Osmond for any replies you want added</p>"
+	}
+}
+
+let retrievedTeam = localStorage.getItem('team');
+document.getElementById('team').value=retrievedTeam;
+console.log('retrievedObject: ', retrievedTeam);
+
+if (retrievedTeam == '"Edu"') {
+	document.getElementById('content').innerHTML =
+		"<div id='iReply' class='button_cont' align='center'><a class='example_a'> No Contact </a></div><p></p><div id='iCall' class='button_cont' align='center'><a class='example_a'>Message Left</a></div><p></p><div id='iDb' class='button_cont' align='center'><a class='example_a'> DB request </a></div><p></p><div id='iDev' class='button_cont' align='center'><a class='example_a'>Sent to Dev </a></div><p></p><div id='iResponce' class='button_cont' align='center'><a class='example_a'>Initial Responce</a></div>"
+} else if (retrievedTeam == '"Lib"') {
+	document.getElementById('content').innerHTML = "<p id='notice'>Email Timothy Osmond for any replies you want added</p>"
+} else if (retrievedTeam == '"LG"') {
+	document.getElementById('content').innerHTML = "<p id='notice'>Email Timothy Osmond for any replies you want added</p>"
+} else if (retrievedTeam == '"Jus"') {
+	document.getElementById('content').innerHTML = "<p id='notice'>Email Timothy Osmond for any replies you want added</p>"
+}
+
+document.getElementById('team').value=retrievedTeam
+
+document.addEventListener('DOMContentLoaded', function () {
 	chrome.tabs.executeScript(null, { file: 'highlight.js' });
-  });
+});
 
 function injectTheScript() {
-	chrome.tabs.executeScript(null, { file: 'iReply.js' });
+	chrome.tabs.executeScript(null, { file: 'EDU/iReply.js' });
 	csschanges()
 };
 function injectTheScript1() {
-	chrome.tabs.executeScript(null, { file: 'iCall.js' });
+	chrome.tabs.executeScript(null, { file: 'EDU/iCall.js' });
 };
 function injectTheScript2() {
-	chrome.tabs.executeScript(null, { file: 'iDb.js' });
+	chrome.tabs.executeScript(null, { file: 'EDU/iDb.js' });
 };
 function csschanges() {
-	chrome.tabs.executeScript(null, { file: 'csschanges.js' });
+	chrome.tabs.executeScript(null, { file: 'EDU/csschanges.js' });
 };
 
 
 function injectTheScript3() {
-	chrome.tabs.executeScript(null, { file: 'iDev.js' });
+	chrome.tabs.executeScript(null, { file: 'EDU/iDev.js' });
 };
 function injectTheScript4() {
-	chrome.tabs.executeScript(null, { file: 'iResponce.js' });
+	chrome.tabs.executeScript(null, { file: 'EDU/iResponce.js' });
 };
+document.getElementById('Save').addEventListener('click', saveteam);
+
 document.getElementById('iReply').addEventListener('click', injectTheScript);
 document.getElementById('iCall').addEventListener('click', injectTheScript1);
 document.getElementById('iDb').addEventListener('click', injectTheScript2);
@@ -75,6 +115,7 @@ input.addEventListener("keyup", function (event) {
 	if (event.keyCode === 13) {
 		event.preventDefault();
 		document.getElementById("submit").click();
-		console.log("working")
 	}
 });
+
+
