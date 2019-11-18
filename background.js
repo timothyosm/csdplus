@@ -1,6 +1,8 @@
-let localstorageTeam = localStorage.getItem('team');
-console.log(localstorageTeam)
-document.getElementById('team').value=localstorageTeam;
+var val = localStorage.getItem('team');
+document.getElementById('teamChoose').innerHTML = "Team: " + val;
+
+
+
 
 function saveteam() {
 	let team = document.querySelector("#team").value;
@@ -17,6 +19,8 @@ let retrievedTeam = localStorage.getItem('team');
 	} else if (retrievedTeam == '"Jus"') {
 		document.getElementById('content').innerHTML = "<p id='notice'>Email Timothy Osmond for any replies you want added</p>"
 	}
+	var val = localStorage.getItem('team');
+	document.getElementById('teamChoose').innerHTML = "Team: " + val;
 }
 
 let retrievedTeam = localStorage.getItem('team');
