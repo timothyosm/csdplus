@@ -1,7 +1,20 @@
-let saveMsg = () => {
-    let input = document.getElementById("mainform").value;
-    localStorage.setItem("msg", input.val());
-}
-var storedValue = localStorage.getItem("msg");
+document.getElementById("save").addEventListener("click", function ()
+    {
+
+        var title = document.getElementById("mainMsg").value ;
+        localStorage.setItem("title", title) ;
+        console.log("saved: " + title);
+
+        var msg = document.getElementById("mainMsg").value ;
+        localStorage.setItem("msg", msg) ;
+        console.log("saved: " + msg);
+
+        var storedValue = localStorage.getItem("msg");
+
+        document.getElementById("storedMessages").innerHTML = storedValue;
+
+    } , false);
+    var storedValue = localStorage.getItem("msg");
+
 document.getElementById("storedMessages").innerHTML = storedValue;
-document.getElementById('save').addEventListener('click', saveMsg());
+document.getElementById("storedMessages").innerHTML = storedValue;
