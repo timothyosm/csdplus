@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<style>
+    body {
+        width: 800px;
+        height: 800px;
+        padding: 20px;
+        background-color: whitesmoke;
+    }
+
+    .card {
+        background-color: darkgray;
+        width: 700px;
+        color: white;
+    }
+</style>
+
+<body>
+
+        <div class="form-group">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Reply Title...">
+                <small id="emailHelp" class="form-text text-muted">This will be the Button Title, so keep it short.</small>
+              </div>
+    <div>
+        <div id="textarea" class="form-group">
+            <textarea class="form-control" id="mainMsg" rows="3"></textarea>
+        </div>
+        <input class="btn btn-dark btn-sm" id='save' type="submit" value="Save" />
+        <input class="btn btn-dark btn-sm" type="submit" value="Back Home" />
+    </div>
+
+
+    <br>
+    <div class="card">
+        <h5 class="card-header">
+            Stored Messages
+        </h5>
+        <div id="storedMessages">
+        </div>
+    </div>
+
+    <script src="ui.js"></script>
+    <script src="background.js"></script>
+
+</body>
+
+</html>
