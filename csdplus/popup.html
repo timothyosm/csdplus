@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<style>
+  body {
+    width: 500px;
+    padding: 15px;
+    color: white;
+    background-color: whitesmoke;
+  }
+
+  .card {
+    background-color: #353A40;
+  }
+</style>
+
+<body>
+
+
+  <div class="card">
+    <div class="card-header">
+      <form action="input.html">
+
+        <input class="btn btn-light btn-sm" type="submit" value="Store a reply" />
+
+      </form>
+    </div>
+    <div class="card-body">
+
+    </div>
+  </div>
+
+
+
+
+  <br>
+
+  <div class="card">
+    <h5 class="card-header">
+      Search
+    </h5>
+    <div class="card-body">
+
+      <div class="input-group">
+        <input id="ticketInput" type="text" class="form-control" placeholder="Ticket Number" aria-label="Ticket Number"
+          aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-light" id="submit" type="button">Search Open</button>
+          <button class="btn btn-light" id="submitclosed" type="button">Search Closed</button>
+        </div>
+      </div>
+      <br>
+      <h5></h5>
+      <div class="input-group">
+        <input id="ticketInputpr" type="text" class="form-control" placeholder="Problem Record Description"
+          aria-label="Description" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-light" id="submitpr" type="button">Search PR</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+  <script src="background.js"></script>
+</body>
+
+</html>
