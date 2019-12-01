@@ -1,4 +1,0 @@
-Change Log
-
-0.1.2 - Added Problem record searching functionality
-0.1.5 - Enter now searches for open tickets, added beginning of ticket color code functionality and added more custom CSS
