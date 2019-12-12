@@ -97,9 +97,79 @@ function highlightUnassigned() {
     }
 }
 
+function highlight1() {
+    let tableCount = document.querySelector("#Gadget3-listBody").getElementsByClassName("listBodyRow").length;
+
+    for (i = 0; i < tableCount; i++) {
+
+        let activeTicketsUnassigned = document.querySelector("#Gadget3-listBody").getElementsByClassName("listBodyRow")[i].getElementsByClassName("listBodyCell")[14].innerHTML;
+
+        if (activeTicketsUnassigned.includes("Priority 3")) {
+            document.querySelector("#Gadget3-listBody").getElementsByClassName("listBodyRow")[i].style.backgroundColor = "#B8D8EE";
+        }
+
+        else if (activeTicketsUnassigned.includes("Priority 2")) {
+           document.querySelector("#Gadget3-listBody").getElementsByClassName("listBodyRow")[i].style.backgroundColor = "#FBCC6A";
+        }
+
+        else if (activeTicketsUnassigned.includes("Priority 1")) {
+            document.querySelector("#Gadget3-listBody").getElementsByClassName("listBodyRow")[i].style.backgroundColor = "#ef6c57";
+            document.getElementById("contentContainer").style.backgroundColor = "#ef6c57";
+        }
+    }
+}
+
+function highlight2() {
+    let tableCount = document.querySelector("#NewGadget6-list-listContainer").getElementsByClassName("listBodyRow").length;
+
+    for (i = 0; i < tableCount; i++) {
+
+        let activeTicketsUnassigned = document.querySelector("#NewGadget6-list-listContainer").getElementsByClassName("listBodyRow")[i].getElementsByClassName("listBodyCell")[14].innerHTML;
+
+        if (activeTicketsUnassigned.includes("Priority 3")) {
+           document.querySelector("#NewGadget6-list-listContainer").getElementsByClassName("listBodyRow")[i].style.backgroundColor = "#B8D8EE";
+        }
+
+        else if (activeTicketsUnassigned.includes("Priority 2")) {
+          document.querySelector("#NewGadget6-list-listContainer").getElementsByClassName("listBodyRow")[i].style.backgroundColor = "#FBCC6A";
+        }
+
+        else if (activeTicketsUnassigned.includes("Priority 1")) {
+           document.querySelector("#NewGadget6-list-listContainer").getElementsByClassName("listBodyRow")[i].style.backgroundColor = "#ef6c57";
+            document.getElementById("contentContainer").style.backgroundColor = "#ef6c57";
+        }
+    }
+}
+
+function highlight3() {
+    let tableCount = document.querySelector("#Gadget1-listBody").getElementsByClassName("listBodyRow").length;
+
+    for (i = 0; i < tableCount; i++) {
+
+        let activeTicketsUnassigned = document.querySelector("#Gadget1-listBody").getElementsByClassName("listBodyRow")[i].getElementsByClassName("listBodyCell")[14].innerHTML;
+
+        if (activeTicketsUnassigned.includes("Priority 3")) {
+           document.querySelector("#Gadget1-listBody").getElementsByClassName("listBodyRow")[i].style.backgroundColor = "#B8D8EE";
+        }
+
+        else if (activeTicketsUnassigned.includes("Priority 2")) {
+          document.querySelector("#Gadget1-listBody").getElementsByClassName("listBodyRow")[i].style.backgroundColor = "#FBCC6A";
+        }
+
+        else if (activeTicketsUnassigned.includes("Priority 1")) {
+         document.querySelector("#Gadget1-listBody").getElementsByClassName("listBodyRow")[i].style.backgroundColor = "#ef6c57";
+            document.getElementById("contentContainer").style.backgroundColor = "#ef6c57";
+        }
+    }
+}
+
+
 setInterval(function () { highlightUnassigned(); }, 3000);
 setInterval(function () { highlight(); }, 3000);
 setInterval(function () { totalTick(); }, 3000);
+setInterval(function () { highlight1(); }, 3000);
+setInterval(function () { highlight2(); }, 3000);
+setInterval(function () { highlight3(); }, 3000);
 
 function totalTick() {
     let totalTickets = document.getElementById("NewGadget0-listBody").getElementsByClassName("listBodyRow").length;

@@ -1,9 +1,10 @@
-#contentContainer {
-	border-radius: 0px !important; 
-	border-top-left-radius: 0px !important; 
-	border-top-right-radius: 0px !important; 
-	border-bottom-right-radius: 0px !important; 
-	border-bottom-left-radius: 0px !important; 
+html * {
+font-family: sans-serif  !important; 
+border-radius: 0px !important; 
+border-top-left-radius: 0px !important; 
+border-top-right-radius: 0px !important; 
+border-bottom-right-radius: 0px !important; 
+border-bottom-left-radius: 0px !important; 
 }
 
 #mainForm-Description2ReadOnly {
@@ -32,37 +33,5 @@
 	height: 1000px !important;
 	-webkit-user-select: auto !important;
   
-}
-
-.dashboardGadgetHeader {
-	border-radius: 0px !important; 
-	border-top-left-radius: 0px !important; 
-	border-top-right-radius: 0px !important; 
-	border-bottom-right-radius: 0px !important; 
-	border-bottom-left-radius: 0px !important; 
-}
-
-.control-visibility-wrapper{
-	border-radius: 0px !important; 
-	border-top-left-radius: 0px !important; 
-	border-top-right-radius: 0px !important; 
-	border-bottom-right-radius: 0px !important; 
-	border-bottom-left-radius: 0px !important; 
-}
-
-.groupBoxHeader{
-	border-radius: 0px !important; 
-	border-top-left-radius: 0px !important; 
-	border-top-right-radius: 0px !important; 
-	border-bottom-right-radius: 0px !important; 
-	border-bottom-left-radius: 0px !important; 
-}
-
-div {
-   	border-radius: 0px !important; 
-	border-top-left-radius: 0px !important; 
-	border-top-right-radius: 0px !important; 
-	border-bottom-right-radius: 0px !important; 
-	border-bottom-left-radius: 0px !important; 
 }
 
