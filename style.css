@@ -1,37 +1,36 @@
 html * {
-font-family: sans-serif  !important; 
-border-radius: 0px !important; 
-border-top-left-radius: 0px !important; 
-border-top-right-radius: 0px !important; 
-border-bottom-right-radius: 0px !important; 
-border-bottom-left-radius: 0px !important; 
+  border-radius: 0px !important;
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  word-wrap: break-word !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-font-smoothing: antialiased !important;
+  text-rendering: optimizelegibility !important;
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif !important;
+  line-height: 18px !important;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+
 }
 
+
 #mainForm-Description2ReadOnly {
-  height: 1000px !important; 
-  -webkit-user-select: auto !important;
+  height: 1000px !important;
 }
 
 #mainForm-DescriptionReadOnly {
   height: 1000px !important;
-  -webkit-user-select: auto !important;
 }
 
 #mainForm-Description5ReadOnly {
   height: 1000px !important;
-  -webkit-user-select: auto !important;
-
 }
 
 #mainForm-Details_editor {
-	height: 600px !important;
-	-webkit-user-select: auto !important;
-  
+  height: 600px !important;
 }
 
-#mainForm-_HistoryDetailsReadOnly{
-	height: 1000px !important;
-	-webkit-user-select: auto !important;
-  
+#mainForm-_HistoryDetailsReadOnly {
+  height: 1000px !important;
 }
-
