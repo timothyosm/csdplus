@@ -1,20 +1,63 @@
+
+
 html * {
   border-radius: 0px !important;
   border-top-left-radius: 0px !important;
   border-top-right-radius: 0px !important;
   border-bottom-right-radius: 0px !important;
-  word-wrap: break-word !important;
   -moz-osx-font-smoothing: grayscale !important;
   -webkit-font-smoothing: antialiased !important;
   -moz-font-smoothing: antialiased !important;
   text-rendering: optimizelegibility !important;
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif !important;
-  line-height: 18px !important;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
-
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004) !important;
+  font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif !important;
+  white-space: inherit !important;
 }
 
+h1 {
+  font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif !important;
+  font-size: 23px !important;
+  font-style: normal !important;
+  font-variant: normal !important;
+  font-weight: 700 !important;
+  line-height: 23px !important;
+}
+h3 {
+  font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif !important;
+  font-size: 17px !important;
+  font-style: normal !important;
+  font-variant: normal !important;
+  font-weight: 700 !important;
+  line-height: 23px !important;
+}
+p {
+  font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif !important;
+  font-size: 14px !important;
+  font-style: normal !important;
+  font-variant: normal !important;
+  font-weight: 400 !important;
+  line-height: 23px !important;
+}
+blockquote {
+  font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif !important;
+  font-size: 17px !important;
+  font-style: normal !important;
+  font-variant: normal !important;
+  font-weight: 400 !important;
+  line-height: 23px !important;
+}
+pre {
+  font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif !important;
+  font-size: 11px !important;
+  font-style: normal !important;
+  font-variant: normal !important;
+  font-weight: 400 !important;
+  line-height: 23px !important;
+}
 
+#contentContainer {
+  padding: 0px !important;
+}
 #mainForm-Description2ReadOnly {
   height: 1000px !important;
 }
@@ -33,4 +76,24 @@ html * {
 
 #mainForm-_HistoryDetailsReadOnly {
   height: 1000px !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 15px !important;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: white !important;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1 !important;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #c1c1c1 !important;
 }
