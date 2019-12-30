@@ -1,4 +1,11 @@
+.listHeaderText{
+	white-space: nowrap !important;
+}
 
+@font-face {
+ font-family: Calibri !important;
+ src: url(Calibri.ttf) !important;
+}
 
 html * {
   border-radius: 0px !important;
@@ -11,7 +18,7 @@ html * {
   text-rendering: optimizelegibility !important;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004) !important;
   font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif !important;
-  white-space: inherit !important;
+
 }
 
 h1 {
