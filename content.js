@@ -58,10 +58,25 @@ setInterval(function () {
   highlight('#NewGadget2-listBody', 12)
   highlight('#NewGadget6-list-listContainer', 14)
   highlight('#Gadget1-listBody', 14)
+  highlight('#NewGadget5-listBody', 12)
+  highlight('#NewGadget6-listBody', 15)
+  highlight('#NewGadget6-list-listBody', 15)
+  highlight('#NewGadget13-listTable', 15)
+  highlight('#NewGadget12-listBody', 14)
+  highlight('#NewGadget12-listBody', 14)
+  highlight('#NewGadget13-listTable', 14)
+  highlight('#NewGadget13-listTable', 14)
+  highlight('#NewGadget13-listBody', 14)
+
+
+  highlightOld()
+  highlightOld2()
+  highlightOld3()
+  highlightOld4()
   totalTick()
 }, 3000)
 
-function highlight (a, b) {
+function highlight(a, b) {
   if (
     typeof document.querySelector(a) != undefined &&
     document.querySelector(a) != null
@@ -97,16 +112,17 @@ function highlight (a, b) {
 
 function totalTick() {
   if (
-    typeof document.getElementById('NewGadget0-listBody') != undefined &&
-    document.getElementById('NewGadget0-listBody') != null
+    document.querySelector(
+      '#NewGadget5 > div.dashboardGadgetHeader.gadgetDraggable > div.dashboardGadgetTitle'
+    )
   ) {
     let totalTickets = document
-      .getElementById('NewGadget0-listBody')
+      .getElementById('NewGadget5-listBody')
       .getElementsByClassName('listBodyRow').length
     let activeTickercounter = 0
     for (i = 0; i < totalTickets; i++) {
       let ticketCount = document
-        .getElementById('NewGadget0-listBody')
+        .getElementById('NewGadget5-listBody')
         .getElementsByClassName('listBodyRow')
         [i].getElementsByClassName('listBodyCell')[3].innerHTML
       if (ticketCount.includes('In Progress')) {
@@ -117,8 +133,95 @@ function totalTick() {
         activeTickercounter++
       }
       document.querySelector(
-        '#NewGadget0 > div.dashboardGadgetHeader.gadgetDraggable > div.dashboardGadgetTitle'
+        '#NewGadget5 > div.dashboardGadgetHeader.gadgetDraggable > div.dashboardGadgetTitle'
       ).innerHTML = 'Active Tickets: ' + activeTickercounter
+    }
+  }
+}
+
+
+function highlightOld() {
+  if (
+    typeof document.querySelector('#NewGadget5-listBody') != undefined &&
+    document.querySelector('#NewGadget5-listBody') != null
+  ) {
+    let tableCount = document.querySelector('#NewGadget5-listBody').getElementsByClassName('listBodyRow').length
+    for (i = 0; i < tableCount; i++) {
+      var date1 = document.querySelector('#NewGadget5-listBody').getElementsByClassName('listBodyRow')[i].getElementsByClassName('listBodyCell')[9].innerHTML.split('/')
+      var newDate = date1[1] + '/' +date1[0] +'/' +date1[2];
+      var date = new Date(newDate);
+      var endDate   = new Date();
+
+      var seconds = (endDate.getTime() - date.getTime()) / 1000;
+
+      if (seconds > 604800) {
+
+       document.querySelector('#NewGadget5-listBody').getElementsByClassName('listBodyRow')[i].getElementsByClassName('listBodyCell')[9].style.backgroundColor = '#b19cd9'
+      }
+    }
+  }
+}
+
+
+function highlightOld2() {
+  if (
+    typeof document.querySelector('#NewGadget12-listBody') != undefined &&
+    document.querySelector('#NewGadget12-listBody') != null
+  ) {
+    let tableCount = document.querySelector('#NewGadget12-listBody').getElementsByClassName('listBodyRow').length
+    for (i = 0; i < tableCount; i++) {
+      var date1 = document.querySelector('#NewGadget12-listBody').getElementsByClassName('listBodyRow')[i].getElementsByClassName('listBodyCell')[17].innerHTML.split('/')
+      var newDate = date1[1] + '/' +date1[0] +'/' +date1[2];
+      var date = new Date(newDate);
+      var endDate   = new Date();
+      var seconds = (endDate.getTime() - date.getTime()) / 1000;
+
+      if (seconds > 604800) {
+
+       document.querySelector('#NewGadget12-listBody').getElementsByClassName('listBodyRow')[i].getElementsByClassName('listBodyCell')[17].style.backgroundColor = '#b19cd9'
+      }
+    }
+  }
+}
+function highlightOld3() {
+  if (
+    typeof document.querySelector('#NewGadget13-listBody') != undefined &&
+    document.querySelector('#NewGadget13-listBody') != null
+  ) {
+    let tableCount = document.querySelector('#NewGadget13-listBody').getElementsByClassName('listBodyRow').length
+    for (i = 0; i < tableCount; i++) {
+      var date1 = document.querySelector('#NewGadget13-listBody').getElementsByClassName('listBodyRow')[i].getElementsByClassName('listBodyCell')[17].innerHTML.split('/')
+      var newDate = date1[1] + '/' +date1[0] +'/' +date1[2];
+      var date = new Date(newDate);
+      var endDate   = new Date();
+      var seconds = (endDate.getTime() - date.getTime()) / 1000;
+
+      if (seconds > 604800) {
+
+       document.querySelector('#NewGadget13-listBody').getElementsByClassName('listBodyRow')[i].getElementsByClassName('listBodyCell')[17].style.backgroundColor = '#b19cd9'
+      }
+    }
+  }
+}
+
+
+function highlightOld4() {
+  if (
+    typeof document.querySelector('#NewGadget15-listBody') != undefined &&
+    document.querySelector('#NewGadget15-listBody') != null
+  ) {
+    let tableCount = document.querySelector('#NewGadget15-listBody').getElementsByClassName('listBodyRow').length
+    for (i = 0; i < tableCount; i++) {
+      var date1 = document.querySelector('#NewGadget15-listBody').getElementsByClassName('listBodyRow')[i].getElementsByClassName('listBodyCell')[8].innerHTML.split('/')
+      var newDate = date1[1] + '/' +date1[0] +'/' +date1[2];
+      var date = new Date(newDate);
+      var endDate   = new Date();
+      var seconds = (endDate.getTime() - date.getTime()) / 1000;
+
+      if (seconds > 604800) {
+
+       document.querySelector('#NewGadget15-listBody').getElementsByClassName('listBodyRow')[i].getElementsByClassName('listBodyCell')[8].style.backgroundColor = '#b19cd9'
+      }
     }
   }
 }

@@ -9,21 +9,14 @@
 //     }
 // }
 
-document.getElementById("formGen").addEventListener("click", setData);
-
 function setData() {
   var CON = document.querySelector("#CON").value;
   var SDP = document.querySelector("#SDP").value;
   var AN = document.querySelector("#AN").value;
   var RD = document.querySelector("#RD").value;
 
-  var table = "CON:" + CON +  
-  '\n' + 
-   "SDP:" + SDP +
-   '\n' + 
-   "AN:" + AN + 
-   '\n' + 
-   "RD" + RD 
+  var table =
+    "CON:" + CON + "\n" + "SDP:" + SDP + "\n" + "AN:" + AN + "\n" + "RD" + RD;
 
   console.log(table);
 
@@ -67,10 +60,6 @@ function submitClosed() {
   chrome.tabs.create({ url: totalUrl2 });
 }
 
-document.getElementById("submit").addEventListener("click", submit);
-document.getElementById("submitpr").addEventListener("click", submitpr);
-document.getElementById("submitclosed").addEventListener("click", submitClosed);
-
 function injectTheScript() {
   chrome.tabs.executeScript(null, { file: "Messages/noreply.js" });
   csschanges();
@@ -88,19 +77,44 @@ function injectTheScript4() {
   chrome.tabs.executeScript(null, { file: "Messages/initial.js" });
 }
 
-document.getElementById("iReply").addEventListener("click", injectTheScript);
-document.getElementById("iCall").addEventListener("click", injectTheScript1);
-document.getElementById("iDb").addEventListener("click", injectTheScript2);
-document.getElementById("iDev").addEventListener("click", injectTheScript3);
-document
-  .getElementById("iResponce")
-  .addEventListener("click", injectTheScript4);
-
+if (document.getElementById("iResponce")) {
+  document
+    .getElementById("iResponce")
+    .addEventListener("click", injectTheScript4);
+}
 var input = document.getElementById("ticketInput");
 
-input.addEventListener("keyup", function (event) {
-  if (event.keyCode === 13) {
-    event.preventDefault();
-    document.getElementById("submit").click();
-  }
-});
+if (document.getElementById("submit")) {
+  input.addEventListener("keyup", function (event) {
+    if (event.keyCode === 13) {
+      event.preventDefault();
+      document.getElementById("submit").click();
+    }
+  });
+}
+if (document.getElementById("submit")) {
+  document.getElementById("submit").addEventListener("click", submit);
+}
+if (document.getElementById("submitpr")) {
+  document.getElementById("submitpr").addEventListener("click", submitpr);
+}
+if (document.getElementById("submitclosed")) {
+  document
+    .getElementById("submitclosed")
+    .addEventListener("click", submitClosed);
+}
+if (document.getElementById("iReply")) {
+  document.getElementById("iReply").addEventListener("click", injectTheScript);
+}
+if (document.getElementById("iCall")) {
+  document.getElementById("iCall").addEventListener("click", injectTheScript1);
+}
+if (document.getElementById("iDb")) {
+  document.getElementById("iDb").addEventListener("click", injectTheScript2);
+}
+if (document.getElementById("iDev")) {
+  document.getElementById("iDev").addEventListener("click", injectTheScript3);
+}
+if (document.getElementById("formGen")) {
+  document.getElementById("formGen").addEventListener("click", setData);
+}
