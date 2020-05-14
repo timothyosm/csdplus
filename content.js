@@ -77,7 +77,7 @@ setInterval(function () {
 
   alliFrames()
 
-}, 3000)
+}, 500)
 
 function highlight(a, b) {
   if (

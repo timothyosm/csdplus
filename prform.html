@@ -22,56 +22,23 @@
         <div class="form-group">
           <h3 for="RD">Title</h3>
           <div class="form-group">
-            <label for="exampleFormControlTextarea1">Enter a brief description of the issue and error messages
-              encountered.
-              <br>
-              For example: When one user / all users> try to create / enquire / update / delete they get an error / are
-              unable
-              to process / etc.
 
-            </label>
-            <textarea id="Title" class="form-control" rows="3"></textarea>
+            <textarea placeholder="Enter a brief description of the issue and error messages encountered." id="Title" class="form-control" rows="3"></textarea>
           </div>
         </div>
 
         <div class="form-group">
           <h3 for="RD">Description</h3>
           <div class="form-group">
-            <label for="exampleFormControlTextarea1">Enter the details of the issue reported, it’s useful to know the
-              impact
-              to Customer(s). If the customer anecdotally explains how this is impacting their business function it can
-              be
-              documented here, to let development know that impact, so they can prioritise the issue
-              <br>
-              If a developer has asked you to handover the ticket to QA/Dev, please outline the full discussion and
-              history of
-              those conversations – anyone in the relevant Dev team should be able to pick up the ticket and move it
-              forward
-              based on the discussions / investigation that’s already occurred. Ticket should still be assigned to the
-              QA Team
-              Library.
-
-            </label>
-            <textarea id="Description" class="form-control" rows="3"></textarea>
+            <textarea placeholder="Enter the details of the issue reported, it’s useful to know the impact to Customer(s). If the customer anecdotally explains how this is impacting their business function it can be documented here, to let development know that impact, so they can prioritise the issue" id="Description" class="form-control" rows="3"></textarea>
           </div>
         </div>
 
         <div class="form-group">
           <h3 for="RD">System Info</h3>
           <div class="form-group">
-            <label for="exampleFormControlTextarea1">This is where to store information about all of the software
-              versions. It
-              assists development to baseline where something might have gone wrong. Version information will have been
-              captured at the top here you can provide supplementary information. Did it ever work and if so does the
-              customer
-              recall what WBA/server version?
-              <br>
-              For Example: “it was working on W10.2B but hasn’t worked since that version”.
-              OR “It doesn’t work in IE 11 but we tested Chrome and that didn’t have an issue”
 
-
-            </label>
-            <textarea id="System Info" class="form-control" rows="3"></textarea>
+            <textarea placeholder="This is where to store information about all of the software versions. It assists development to baseline where something might have gone wrong. Version information will have been captured at the top here you can provide supplementary information. Did it ever work and if so does the customer recall what WBA/server version?" id="System Info" class="form-control" rows="3"></textarea>
           </div>
         </div>
 
@@ -142,13 +109,8 @@
         <h3>Login User Profile</h3>
         <div class="form-group">
           <div class="form-group">
-            <label for="exampleFormControlTextarea1">User login details if the incident is specific to a user/login.
-              <br>
-              Borrower details – ID/password where applicable on customers TEST/LIVE system if only replicated onsite.
-              If not
-              supply the QA borrower (ID/password) used to repeat the bug.
-            </label>
-            <textarea id='Login User Profile' class="form-control" rows="3"></textarea>
+
+            <textarea placeholder="User login details if the incident is specific to a user/login. Borrower details – ID/password where applicable on customers TEST/LIVE system if only replicated onsite. If not supply the QA borrower (ID/password) used to repeat the bug." id='Login User Profile' class="form-control" rows="3"></textarea>
           </div>
         </div>
 
@@ -164,12 +126,9 @@
 
         <h3>Replication Env.</h3>
         <div class="form-group">
-          <label for="exampleFormControlTextarea1">Link to the environment this was replicated in. (e.g. Customer URL &
-            any
-            other information for non-managed service customers where VPN is required.)</label>
           <div class="form-group">
             <label>Link</label>
-            <input id='Link' type="email" class="form-control" />
+            <input placeholder="Link to the environment this was replicated in. " id='Link' type="email" class="form-control" />
           </div>
           <select id='environment' class="form-control">
             <option>Live</option>

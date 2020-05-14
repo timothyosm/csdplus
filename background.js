@@ -9,24 +9,7 @@
 //     }
 // }
 
-function setData() {
-  var CON = document.querySelector("#CON").value;
-  var SDP = document.querySelector("#SDP").value;
-  var AN = document.querySelector("#AN").value;
-  var RD = document.querySelector("#RD").value;
 
-  var table =
-    "CON:" + CON + "\n" + "SDP:" + SDP + "\n" + "AN:" + AN + "\n" + "RD" + RD;
-
-  console.log(table);
-
-  var dummy = document.createElement("textarea");
-  document.body.appendChild(dummy);
-  dummy.value = table;
-  dummy.select();
-  document.execCommand("copy");
-  document.body.removeChild(dummy);
-}
 
 function submit() {
   var firstUrl =
@@ -118,3 +101,48 @@ if (document.getElementById("iDev")) {
 if (document.getElementById("formGen")) {
   document.getElementById("formGen").addEventListener("click", setData);
 }
+
+
+function setData() {
+  var title = document.querySelector("#Title").value
+  var Description = document.querySelector("#Description").value;
+  var SystemInfo = document.querySelector("#System\\ Info").value;
+  var CON = document.querySelector("#CON").value
+  var SDP = document.querySelector("#SDP").value
+  var AN = document.querySelector("#AN").value
+  var RD = document.querySelector("#RD").value
+  var version = document.querySelector("#Version").value
+  var otherversion = document.querySelector("#Other\\ versions").value
+  var module = document.querySelector("#Module\\ list").value
+  var othermodule = document.querySelector("#other").value
+  var LoginUserProfile = document.querySelector("#Other\\ versions").value
+  var userseffected = document.querySelector("#users\\ impacted").value
+  var Environment = document.querySelector("#environment").value
+  var userseffected = document.querySelector("#users\\ impacted").value
+  var QAversion = document.querySelector("#wa").value
+
+
+  document.querySelector("#Title1").innerHTML = title
+  document.querySelector("#Description1").innerHTML = Description
+  document.querySelector("#System1").innerHTML = SystemInfo
+  document.querySelector("#con1").innerHTML = CON
+  document.querySelector("#sdp1").innerHTML = SDP
+  document.querySelector("#an1").innerHTML = AN
+  document.querySelector("#rd1").innerHTML = RD
+  document.querySelector("#SydusWBA1").innerHTML = version
+  document.querySelector("#Other1").innerHTML = otherversion
+  document.querySelector("#module1").innerHTML =  module
+  document.querySelector("#other1").innerHTML = othermodule
+  document.querySelector("#lup1").innerHTML = LoginUserProfile
+  document.querySelector("#users1").innerHTML = userseffected
+  document.querySelector("#rep1").innerHTML  = Environment
+  if(document.querySelector("body > form > label:nth-child(1) > input[type=radio]").checked == true){
+    document.querySelector("#tested1").innerHTML = "Yes"
+
+  } else {
+    document.querySelector("#tested1").innerHTML = "No"
+
+  }
+}
+
+
