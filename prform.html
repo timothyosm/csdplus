@@ -1,47 +1,311 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>CSD+</title>
-    <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
-    <script src="background.js"></script>
-  </head>
-  <style>
-    body {
-      width: 700px;
-      padding-top: 15px;
-      padding-left: 15px;
-      padding-right: 15px;
-      background-color: whitesmoke;
-    }
-  </style>
 
-  <body>
-    <div class="form-group">
-      <label for="CON">Customer Organisation Name</label>
-      <input type="email" class="form-control" id="CON" />
-    </div>
-    <div class="form-group">
-      <label for="SDP">Service Desk Problem ID</label>
-      <input type="email" class="form-control" id="SDP" />
-    </div>
-    <div class="form-group">
-      <label for="AN">Analyst Name</label>
-      <input type="email" class="form-control" id="AN" />
-    </div>
-    <div class="form-group">
-      <label for="RD">Replication Date</label>
-      <input type="email" class="form-control" id="RD" />
-    </div>
-    <button id = "formGen" type="submit" class="btn btn-dark">Submit</button>
-    
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>CSD+</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
   <script src="background.js"></script>
-  </body>
+</head>
+
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1 for="RD">PR ticket form</h1>
+
+<br>
+        <div class="form-group">
+          <h3 for="RD">Title</h3>
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Enter a brief description of the issue and error messages
+              encountered.
+              <br>
+              For example: When one user / all users> try to create / enquire / update / delete they get an error / are
+              unable
+              to process / etc.
+
+            </label>
+            <textarea id="Title" class="form-control" rows="3"></textarea>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <h3 for="RD">Description</h3>
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Enter the details of the issue reported, it’s useful to know the
+              impact
+              to Customer(s). If the customer anecdotally explains how this is impacting their business function it can
+              be
+              documented here, to let development know that impact, so they can prioritise the issue
+              <br>
+              If a developer has asked you to handover the ticket to QA/Dev, please outline the full discussion and
+              history of
+              those conversations – anyone in the relevant Dev team should be able to pick up the ticket and move it
+              forward
+              based on the discussions / investigation that’s already occurred. Ticket should still be assigned to the
+              QA Team
+              Library.
+
+            </label>
+            <textarea id="Description" class="form-control" rows="3"></textarea>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <h3 for="RD">System Info</h3>
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">This is where to store information about all of the software
+              versions. It
+              assists development to baseline where something might have gone wrong. Version information will have been
+              captured at the top here you can provide supplementary information. Did it ever work and if so does the
+              customer
+              recall what WBA/server version?
+              <br>
+              For Example: “it was working on W10.2B but hasn’t worked since that version”.
+              OR “It doesn’t work in IE 11 but we tested Chrome and that didn’t have an issue”
+
+
+            </label>
+            <textarea id="System Info" class="form-control" rows="3"></textarea>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="CON">Customer Organisation Name</label>
+          <input id="CON" type="email" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="SDP">Service Desk Problem ID</label>
+          <input id="SDP" type="email" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="AN">Analyst Name</label>
+          <input id="AN" type="email" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="RD">Replication Date</label>
+          <input id="RD" type="email" class="form-control" />
+        </div>
+
+        <h3>Spydus WBA/Server Version: (including Patch Version) </h3>
+        <div class="form-group">
+          <label>Version</label>
+          <input id="Version" type="email" class="form-control" />
+        </div>
+
+        <h3>Other versions</h3>
+        <div class="form-group">
+          <label>Other versions</label>
+          <input id="Other versions" type="email" class="form-control" />
+        </div>
+
+        <h3>Module</h3>
+        <div class="form-group">
+          <label>Module list:</label>
+          <select input id="Module list" class="form-control">
+            <option>Acquisitions</option>
+            <option>Archives</option>
+            <option>Cataloguing</option>
+            <option>Circulation</option>
+            <option>Enquiry</option>
+            <option>ERM</option>
+            <option>Events</option>
+            <option>Serials</option>
+            <option>Home</option>
+            <option>Requests</option>
+            <option>Reports</option>
+            <option>Spydus BI</option>
+            <option>Maintenance</option>
+            <option>Mobile (e.g. SpydusGo, SpydusMobile)</option>
+            <option>File Interfaces (e.g. Web Services, API)</option>
+            <option>Self Service</option>
+            <option>OPAC/WPAC</option>
+            <option>eResources /eVendors</option>
+            <option>Payment gateway (e.g. Paypal, EPAY)</option>
+            <option>Circulation Office</option>
+            <option>Payment gateway (e.g. Paypal, EPAY)</option>
+            <option>Other (Please specify below)</option>
+          </select>
+          <br>
+          <div class="form-group">
+            <label>Other</label>
+            <input id='other' type="email" class="form-control" />
+          </div>
+        </div>
+
+
+        <h3>Login User Profile</h3>
+        <div class="form-group">
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">User login details if the incident is specific to a user/login.
+              <br>
+              Borrower details – ID/password where applicable on customers TEST/LIVE system if only replicated onsite.
+              If not
+              supply the QA borrower (ID/password) used to repeat the bug.
+            </label>
+            <textarea id='Login User Profile' class="form-control" rows="3"></textarea>
+          </div>
+        </div>
+
+        <h3>How many users impacted</h3>
+        <div class="form-group">
+          <select id='users impacted' class="form-control">
+            <option>One</option>
+            <option>Multiple</option>
+            <option>All Users</option>
+          </select>
+        </div>
+
+
+        <h3>Replication Env.</h3>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Link to the environment this was replicated in. (e.g. Customer URL &
+            any
+            other information for non-managed service customers where VPN is required.)</label>
+          <div class="form-group">
+            <label>Link</label>
+            <input id='Link' type="email" class="form-control" />
+          </div>
+          <select id='environment' class="form-control">
+            <option>Live</option>
+            <option>Test</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <label for="exampleFormControlTextarea1">Tested in QA?</label>
+
+        <form>
+          <label class="radio-inline">
+            <input type="radio" name="optradio">Yes
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="optradio">No
+          </label>
+        </form>
+
+        <label for="exampleFormControlTextarea1"> QA Version & Server (important that this is captured)
+        </label>
+        <input id='wa' type="email" class="form-control" />
+        <button id="formGen" type="submit" class="btn btn-dark">Submit</button>
+
+      </div>
+
+      <div class="col">
+
+<h2>Hightlight then copy and paste the below into your Problem Ticket</h2>
+<br><br>
+        <table class="table table-bordered">
+
+          <tbody>
+            <tr>
+              <th scope="row">Title</th>
+            </tr>
+            <tr>
+              <td id="Title1" ></td>
+            </tr>
+            <tr>
+              <th scope="row">Description</th>
+            </tr>
+            <tr>
+              <td id="Description1" ></td>
+            </tr>
+            <tr>
+              <th scope="row">System Info</th>
+            </tr>
+            <tr>
+              <td id="System1" ></td>
+            </tr>
+            <tr>
+              <th scope="row">Customer Organisation Name</th>
+            </tr>
+            <tr>
+              <td id="con1" ></td>
+            </tr>
+            <tr>
+              <th scope="row">Service Desk Problem ID</th>
+            </tr>
+            <tr>
+              <td id="sdp1" ></td>
+            </tr>
+            <tr>
+              <th scope="row">Analyst Name</th>
+            </tr>
+            <tr>
+              <td id="an1" ></td>
+            </tr>
+            <tr>
+              <th scope="row">Replication Date</th>
+            </tr>
+            <tr>
+              <td id="rd1" ></td>
+            </tr>
+            <tr>
+              <th scope="row">Spydus WBA/Server Version</th>
+              <th scope="row">Other Version</th>
+            </tr>
+            <tr>
+              <td id='SydusWBA1' ></td>
+              <td id='Other1' ></td>
+            </tr>
+
+            <tr>
+              <th scope="row">Module</th>
+            </tr>
+            <tr>
+              <td id='module1' ></td>
+            </tr>
+            <tr>
+              <th scope="row">Login User Profile</th>
+            </tr>
+            <tr>
+              <td id='lup1' ></td>
+            </tr>
+            <tr>
+              <th scope="row">How many users impacted</th>
+            </tr>
+            <tr>
+              <td id='users1' ></td>
+            </tr>
+            <tr>
+              <th scope="row">Replication Env.</th>
+            </tr>
+            <tr>
+              <td id='rep1' ></td>
+            </tr>
+            <tr>
+              <th scope="row">Tested in QA?</th>
+            </tr>
+            <tr>
+              <td id='tested1' ></td>
+            </tr>
+            <tr>
+              <th scope="row">QA environment</th>
+            </tr>
+            <tr>
+              <td id='qa1' ></td>
+            </tr>
+
+
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <br>
+  <br>
+  <br>
+
+  <div id=Data></div>
+  <script src="background.js"></script>
+</body>
 
 </html>

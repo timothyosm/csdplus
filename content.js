@@ -44,22 +44,25 @@ if (typeof e != undefined && e != null) {
     title + '- Load Time: ' + ttl / 1000.0 + ' seconds.'
 }
 
-let style = document.createElement('link')
-style.rel = 'stylesheet'
-style.type = 'text/css'
-style.href = chrome.extension.getURL('style.css')
-;(document.head || document.documentElement).appendChild(style)
+
 
 //highlight
 
 setInterval(function () {
+  
+  highlightOld()
+  highlightOld2()
+  highlightOld3()
+  highlightOld4()
+  highlightOld5()
+  totalTick()
   highlight('#Gadget3-listBody', 14)
   highlight('#NewGadget0-listBody', 12)
   highlight('#NewGadget2-listBody', 12)
   highlight('#NewGadget6-list-listContainer', 14)
   highlight('#Gadget1-listBody', 14)
   highlight('#NewGadget5-listBody', 12)
-  highlight('#NewGadget6-listBody', 15)
+  highlight('#NewGadget6-listBody', 12)
   highlight('#NewGadget6-list-listBody', 15)
   highlight('#NewGadget13-listTable', 15)
   highlight('#NewGadget12-listBody', 14)
@@ -67,13 +70,13 @@ setInterval(function () {
   highlight('#NewGadget13-listTable', 14)
   highlight('#NewGadget13-listTable', 14)
   highlight('#NewGadget13-listBody', 14)
+  // iframeDyna('#mainForm-DescriptionReadOnly') 
 
+  // iframeDyna('#mainForm-Description2ReadOnly') 
+  // iframeDyna('#mainForm-_HistoryDetailsReadOnly') 
 
-  highlightOld()
-  highlightOld2()
-  highlightOld3()
-  highlightOld4()
-  totalTick()
+  alliFrames()
+
 }, 3000)
 
 function highlight(a, b) {
@@ -151,10 +154,14 @@ function highlightOld() {
       var newDate = date1[1] + '/' +date1[0] +'/' +date1[2];
       var date = new Date(newDate);
       var endDate   = new Date();
+      let ticketCount = document
+        .getElementById('NewGadget5-listBody')
+        .getElementsByClassName('listBodyRow')
+        [i].getElementsByClassName('listBodyCell')[3].innerHTML
 
       var seconds = (endDate.getTime() - date.getTime()) / 1000;
 
-      if (seconds > 604800) {
+      if (seconds > 604800 && !ticketCount.includes('With Customer')) {
 
        document.querySelector('#NewGadget5-listBody').getElementsByClassName('listBodyRow')[i].getElementsByClassName('listBodyCell')[9].style.backgroundColor = '#b19cd9'
       }
@@ -224,4 +231,60 @@ function highlightOld4() {
       }
     }
   }
+}
+
+function highlightOld5() {
+  if (
+    typeof document.querySelector('#NewGadget5-listBody') != undefined &&
+    document.querySelector('#NewGadget5-listBody') != null
+  ) {
+    let tableCount = document.querySelector('#NewGadget5-listBody').getElementsByClassName('listBodyRow').length
+    for (i = 0; i < tableCount; i++) {
+      var date1 = document.querySelector('#NewGadget5-listBody').getElementsByClassName('listBodyRow')[i].getElementsByClassName('listBodyCell')[9].innerHTML.split('/')
+      var newDate = date1[1] + '/' +date1[0] +'/' +date1[2];
+      var date = new Date(newDate);
+      var endDate   = new Date();
+      var seconds = (endDate.getTime() - date.getTime()) / 1000;
+
+      let ticketCount = document
+        .getElementById('NewGadget5-listBody')
+        .getElementsByClassName('listBodyRow')
+        [i].getElementsByClassName('listBodyCell')[3].innerHTML
+
+      if (seconds > 1814400 && ticketCount.includes('With Customer')) {
+
+        document.querySelector('#NewGadget5-listBody').getElementsByClassName('listBodyRow')[i].getElementsByClassName('listBodyCell')[9].style.backgroundColor = '#77dd77'
+      }
+    }
+  }
+}
+
+
+
+function iframeDyna(a) {
+  if (
+    typeof document.querySelector(a) != undefined &&
+    document.querySelector(a) != null
+  ){
+var iframeHeight = document.querySelector(a).contentWindow.document.body.scrollHeight + "px"
+
+document.querySelector(a).style.height = iframeHeight
+  }
+}
+
+
+function alliFrames() {
+  let checker = document.getElementsByTagName('iframe')
+
+    if (
+      typeof checker != undefined &&
+      checker != null
+    ){
+      for (i = 0; i < document.getElementsByTagName('iframe').length; i++) {
+
+      var iframeHeight = document.getElementsByTagName('iframe')[i].contentWindow.document.body.scrollHeight + "px"
+
+      document.getElementsByTagName('iframe')[i].style.height = iframeHeight
+      }
+    }
 }
