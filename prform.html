@@ -6,226 +6,281 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>CSD+</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
-    <script src="background.js"></script>
 </head>
 
 
 <body>
 
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h1 for="RD">PR ticket form</h1>
+            <div class="row" style="position: absolute;top:0;bottom: 0;left: 0;right: 0;margin: auto;">
+                <div class="col" >
+                    <h3>Reminder</h3>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Relevant screenshots are attached (Attach to the CSD ticket)</label>
+                      </div>
 
-                <br>
-                <div class="form-group">
-                    <h1 for="RD">Title</h1>
-                    <div class="form-group">
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Relevant config / settings have been captured in the replication steps</label>
+                      </div>
 
-                        <textarea placeholder="Enter a brief description of the issue and error messages encountered." id="Title" class="form-control" rows="3"></textarea>
-                    </div>
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Browser screenshots include the full URL</label>
+                      </div>
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">System info includes versions of all related components</label>
+                      </div>
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Log files are attached where relevant – e.g. Fiddler trace (for errors captured) (Attach to the CSD ticket)</label>
+                      </div>
                 </div>
 
-                <div class="form-group">
-                    <h1 for="RD">Description</h1>
-                    <div class="form-group">
-                        <textarea placeholder="Enter the details of the issue reported, it’s useful to know the impact to Customer(s). If the customer anecdotally explains how this is impacting their business function it can be documented here, to let development know that impact, so they can prioritise the issue"
-                            id="Description" class="form-control" rows="3"></textarea>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <h1 for="RD">System Info</h1>
-                    <div class="form-group">
-
-                        <textarea placeholder="This is where to store information about all of the software versions. It assists development to baseline where something might have gone wrong. Version information will have been captured at the top here you can provide supplementary information. Did it ever work and if so does the customer recall what WBA/server version?"
-                            id="System Info" class="form-control" rows="3"></textarea>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="CON">Customer Organisation Name</label>
-                    <input id="CON" type="email" class="form-control" />
-                </div>
-                <div class="form-group">
-                    <label for="SDP">Service Desk Problem ID</label>
-                    <input id="SDP" type="email" class="form-control" />
-                </div>
-                <div class="form-group">
-                    <label for="AN">Analyst Name</label>
-                    <input id="AN" type="email" class="form-control" />
-                </div>
-                <div class="form-group">
-                    <label for="RD">Replication Date</label>
-                    <input id="RD" type="email" class="form-control" />
-                </div>
-
-                <h1>Spydus WBA/Server Version: (including Patch Version) </h1>
-                <div class="form-group">
-                    <label>Version</label>
-                    <input id="Version" type="email" class="form-control" />
-                </div>
-
-                <h1>Other versions</h1>
-                <div class="form-group">
-                    <label>Other versions</label>
-                    <input id="Other versions" type="email" class="form-control" />
-                </div>
-
-                <h1>Module</h1>
-                <div class="form-group">
-                    <label>Module list:</label>
-                    <select input id="Module list" class="form-control">
-            <option>Acquisitions</option>
-            <option>Archives</option>
-            <option>Cataloguing</option>
-            <option>Circulation</option>
-            <option>Enquiry</option>
-            <option>ERM</option>
-            <option>Events</option>
-            <option>Serials</option>
-            <option>Home</option>
-            <option>Requests</option>
-            <option>Reports</option>
-            <option>Spydus BI</option>
-            <option>Maintenance</option>
-            <option>Mobile (e.g. SpydusGo, SpydusMobile)</option>
-            <option>File Interfaces (e.g. Web Services, API)</option>
-            <option>Self Service</option>
-            <option>OPAC/WPAC</option>
-            <option>eResources /eVendors</option>
-            <option>Payment gateway (e.g. Paypal, EPAY)</option>
-            <option>Circulation Office</option>
-            <option>Payment gateway (e.g. Paypal, EPAY)</option>
-            <option>Other (Please specify below)</option>
-          </select>
+                <div class="col">
+                    <h1 for="RD">PR ticket form</h1>
+        
                     <br>
                     <div class="form-group">
-                        <label>Other</label>
-                        <input id='other' type="email" class="form-control" />
+                        <h1 for="RD">Title</h1>
+                        <div class="form-group">
+        
+                            <textarea placeholder="Enter a brief description of the issue and error messages encountered." id="Title" class="form-control" rows="3"></textarea>
+                        </div>
                     </div>
-                </div>
-
-
-                <h1>Login User Profile</h1>
-                <div class="form-group">
+        
                     <div class="form-group">
-
-                        <textarea placeholder="User login details if the incident is specific to a user/login. Borrower details – ID/password where applicable on customers TEST/LIVE system if only replicated onsite. If not supply the QA borrower (ID/password) used to repeat the bug."
-                            id='Login User Profile' class="form-control" rows="3"></textarea>
-                    </div>
-                </div>
-
-                <h1>How many users impacted</h1>
-                <div class="form-group">
-                    <select id='users impacted' class="form-control">
-            <option>One</option>
-            <option>Multiple</option>
-            <option>All Users</option>
-          </select>
-                </div>
-
-
-                <h1>Replication Env.</h1>
-                <div class="form-group">
-                    <div class="form-group">
-                        <label>Link</label>
-                        <input placeholder="Link to the environment this was replicated in. " id='Link' type="email" class="form-control" />
-                    </div>
-                    <select id='environment' class="form-control">
-            <option>Live</option>
-            <option>Test</option>
-            <option>Other</option>
-          </select>
-                </div>
-                <label for="exampleFormControlTextarea1">Tested in QA?</label>
-
-                <form>
-                    <label class="radio-inline">
-            <input type="radio" name="optradio">Yes
-          </label>
-                    <label class="radio-inline">
-            <input type="radio" name="optradio">No
-          </label>
-                </form>
-
-                <label for="exampleFormControlTextarea1"> QA Version & Server (important that this is captured)
-        </label>
-                <input id='wa' type="email" class="form-control" />
-                <button id="formGen" type="submit" class="btn btn-dark">Submit</button>
-
-            </div>
-
-            <div class="col">
-
-                <h2>Hightlight then copy and paste the below into your Problem Ticket</h2>
-                <br><br>
-                <div>
-                    <div class="card">
-                        <div class="card-body">
-
-                            <h1>Title</h1>
-                            <p id="Title1"></p>
-                            <br>
-
-                            <h1>Description</h1>
-                            <p id="Description1"></p>
-                            <br>
-
-                            <h1>System Info</h1>
-                            <p id="System1"></p>
-                            <br>
-
-                            <h1>Customer Organisation Name</h1>
-                            <p id="con1"></p>
-                            <br>
-
-                            <h1>Service Desk Problem ID</h1>
-                            <p id="sdp1"></p>
-                            <br>
-
-                            <h1>Analyst Name</h1>
-                            <p id="an1"></p>
-                            <br>
-
-                            <h1>Replication Date</h1>
-                            <p id="rd1"></p>
-                            <br>
-
-                            <h1>Spydus WBA/Server Version</h1>
-                            <p id='SydusWBA1'></p>
-                            <br>
-
-                            <h1>Other Version</h1>
-                            <p id='Other1'></p>
-                            <br>
-
-                            <h1>Module</h1>
-                            <p id='module1'></p>
-                            <br>
-
-                            <h1>Login User Profile</h1>
-                            <p id='lup1'></p>
-                            <br>
-
-                            <h1>How many users impacted</h1>
-                            <p id='users1'></p>
-                            <br>
-
-                            <h1>Replication Env.</h1>
-                            <p id='rep1'></p>
-                            <br>
-
-                            <h1>Tested in QA?</h1>
-                            <p id='tested1'></p>
-                            <br>
-
-                            <h1>QA environment</h1>
-                            <p id='qa1'></p>
-                            <br>
+                        <h1 for="RD">Description</h1>
+                        <div class="form-group">
+                            <textarea style="height: 300px;" placeholder="Enter the details of the issue reported, it’s useful to know the impact to Customer(s). If the customer anecdotally explains how this is impacting their business function it can be documented here, to let development know that impact, so they can prioritise the issue"
+                                id="Description" class="form-control" rows="3"></textarea>
 
                         </div>
                     </div>
+        
+                    <div class="form-group">
+                        <h1 for="RD">System Info</h1>
+                        <div class="form-group">
+        
+                            <textarea style="height: 300px;" placeholder="This is where to store information about all of the software versions. It assists development to baseline where something might have gone wrong. Version information will have been captured at the top here you can provide supplementary information. Did it ever work and if so does the customer recall what WBA/server version?"
+                                id="System Info" class="form-control" rows="3"></textarea>
+                        </div>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="CON">Customer Organisation Name</label>
+                        <input id="CON" type="email" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="SDP">Service Desk Problem ID</label>
+                        <input id="SDP" type="email" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="AN">Analyst Name</label>
+                        <input id="AN" type="email" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="RD">Replication Date</label>
+                        <input id="RD" type="email" class="form-control" />
+                    </div>
+        
+                    <h1>Spydus WBA/Server Version: (including Patch Version) </h1>
+                    <div class="form-group">
+                        <label>Version</label>
+                        <input id="Version" type="email" class="form-control" />
+                    </div>
+        
+                    <h2>Other versions</h2>
+                    <div class="form-group">
+                        <label>Other versions</label>
+                        <input id="Other versions" type="email" class="form-control" />
+                    </div>
+        
+                    <h1>Module</h1>
+                    <div class="form-group">
+                        <label>Module list:</label>
+                        <select input id="Module list" class="form-control">
+                <option>Acquisitions</option>
+                <option>Archives</option>
+                <option>Cataloguing</option>
+                <option>Circulation</option>
+                <option>Enquiry</option>
+                <option>ERM</option>
+                <option>Events</option>
+                <option>Serials</option>
+                <option>Home</option>
+                <option>Requests</option>
+                <option>Reports</option>
+                <option>Spydus BI</option>
+                <option>Maintenance</option>
+                <option>Mobile (e.g. SpydusGo, SpydusMobile)</option>
+                <option>File Interfaces (e.g. Web Services, API)</option>
+                <option>Self Service</option>
+                <option>OPAC/WPAC</option>
+                <option>eResources /eVendors</option>
+                <option>Payment gateway (e.g. Paypal, EPAY)</option>
+                <option>Circulation Office</option>
+                <option>Payment gateway (e.g. Paypal, EPAY)</option>
+                <option>Other (Please specify below)</option>
+              </select>
+                        <br>
+                        <div class="form-group">
+                            <label>Other</label>
+                            <input id='other' type="email" class="form-control" />
+                        </div>
+                    </div>
+        
+        
+                    <h1>Login User Profile</h1>
+                    <div class="form-group">
+                        <div class="form-group">
+        
+                            <textarea placeholder="User login details if the incident is specific to a user/login. Borrower details – ID/password where applicable on customers TEST/LIVE system if only replicated onsite. If not supply the QA borrower (ID/password) used to repeat the bug."
+                                id='Login User Profile' class="form-control" rows="3"></textarea>
+                        </div>
+                    </div>
+        
+                    <h1>How many users impacted</h1>
+                    <div class="form-group">
+                        <select id='users impacted' class="form-control">
+                <option>One</option>
+                <option>Multiple</option>
+                <option>All Users</option>
+              </select>
+                    </div>
+        
+        
+                    <h1>Replication Env.</h1>
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label>Link</label>
+                            <input placeholder="Link to the environment this was replicated in. " id='Link' type="email" class="form-control" />
+                        </div>
+                        <select id='environment' class="form-control">
+                <option>Live</option>
+                <option>Test</option>
+                <option>Other</option>
+              </select>
+                    </div>
+                    <label for="exampleFormControlTextarea1">Tested in QA?</label>
+        
+                    <form>
+                        <label class="radio-inline">
+                <input id = "y" type="radio" name="optradio">Yes
+              </label>
+                        <label class="radio-inline">
+                <input id = "n" type="radio" name="optradio">No
+              </label>
+                    </form>
+        
+                    <label for="exampleFormControlTextarea1"> QA Version & Server (important that this is captured)
+            </label>
+                    <input id='wa' type="email" class="form-control" />
+                    <br>
+
+                    <h1>Replication Steps</h1>
+                    <label>Expected outcome:</label>
+                    <textarea id = "expected" style="height: 300px;" placeholder="Steps to perform and the desired result the customer expects:"
+                    id="Description" class="form-control"></textarea>
+                    <label>Actual outcome:</label>
+    
+                    <textarea id = "actual" style="height: 300px;" placeholder="Steps performed and the result the customer is experiencing:"
+                    id="Description" class="form-control" ></textarea>
+                    <br>
+                    
+                    <button id="formGen" type="submit" class="btn btn-dark">Submit</button>
+                    <br>
+                </div>
+
+
+        
+  
+
+            <div class="col">
+                <div class="card bg-light mb-3">
+
+                <div class="card-header">Hightlight then copy and paste the below into your Problem Ticket</div>
+                <div class="card-body">
+
+                    <h3>Title</h3>
+                    <p id="Title1"></p>
+                    <br>
+
+                    <h3>Description</h3>
+                    <p id="Description1"></p>
+                    <br>
+
+                    <h3>System Info</h3>
+                    <p id="System1"></p>
+                    <br>
+
+                    <h3>Customer Organisation Name</h3>
+                    <p id="con1"></p>
+                    <br>
+
+                    <h3>Service Desk Problem ID</h3>
+                    <p id="sdp1"></p>
+                    <br>
+
+                    <h3>Analyst Name</h3>
+                    <p id="an1"></p>
+                    <br>
+
+                    <h3>Replication Date</h3>
+                    <p id="rd1"></p>
+                    <br>
+
+                    <h3>Spydus WBA/Server Version</h3>
+                    <p id='SydusWBA1'></p>
+                    <br>
+
+                    <h5>Other Version</h5>
+                    <p id='Other1'></p>
+                    <br>
+
+                    <h3>Module</h3>
+                    <p id='module1'></p>
+                    <p id='othmod'></p>
+                    <br>
+
+                    <h3>Login User Profile</h3>
+                    <p id='lup1'></p>
+                    <br>
+
+                    <h3>How many users impacted</h3>
+                    <p id='users1'></p>
+                    <br>
+
+                    <h3>Replication Env.</h3>
+                    <p id='testLink'></p>
+                    <p id='rep1'></p>
+                    <br>
+
+                    <h3>Tested in QA?</h3>
+                    <p id='tested1'></p>
+                    <br>
+
+                    <h3>QA environment</h3>
+                    <p id='qa1'></p>
+                    <br>
+
+
+
+                    
+                    <h3>Replication</h3>
+                    <h5>Expected</h5>
+                    <p id='exp'></p>
+                    <br>
+<h5>Actual</h5>
+                    <p id='act'></p>
+                    <br>
+                </div>
+
+
+
+
+
                 </div>
             </div>
 
@@ -235,11 +290,9 @@
 
 
     <br>
-    <br>
-    <br>
 
-    <div id=Data></div>
     <script src="background.js"></script>
+
 </body>
 
 </html>
