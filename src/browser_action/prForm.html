@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Problem Record Form</title>
+    <link
+      rel="stylesheet"
+      href="CSS/milligram.css"
+    />
+  </head>
+  <body>
+    <div class="row">
+      <div class="column column-33">
+        <h1>Reminder</h1>
+        <input type="checkbox" />
+        <label class="label-inline"
+          >Relevant screenshots are attached (Attach to the CSD ticket)</label
+        >
+        <br />
+        <br />
+        <input type="checkbox" />
+        <label class="label-inline"
+          >Relevant config / settings have been captured in the replication
+          steps</label
+        >
+        <br />
+        <br />
+        <input type="checkbox" />
+        <label class="label-inline"
+          >Browser screenshots include the full URL
+        </label>
+        <br />
+        <br />
+        <input type="checkbox" />
+        <label class="label-inline"
+          >System info includes versions of all related components</label
+        >
+        <br />
+        <br />
+        <input type="checkbox" />
+        <label class="label-inline"
+          >Log files are attached where relevant (Attach to the CSD ticket)</label
+        >
+        <br />
+        <br />
+        <input type="checkbox" />
+        <label class="label-inline"
+          >Refer to Spydus Wiki on DevOps to verify product version numbers if
+        </label>
+        <br />
+        <br />
+      </div>
+      <div class="column column-33">
+        <form>
+          <fieldset>
+            <h1>PR ticket form</h1>
+            <label for="cOn">Customer Organisation Name</label>
+            <input type="text" id="cOn" />
+            <label for="aN">Analyst Name</label>
+            <input type="text" id="aN" />
+            <label for="rD">Replication Date</label>
+            <input type="text" id="rD" />
+            <h2>Spydus WBA/Server Version: (including Patch Version)</h2>
+            <select input id="Version">
+              <option>Spydus WBA (W10.x)</option>
+              <option>Spydus Server (10.x)</option>
+              <option>Spydus Tray (ST1.x)</option>
+              <option>Spydus Mobile</option>
+              <option>Spydus Go</option>
+              <option>Thick Client (10.x)</option>
+              <option>Circulation Offline</option>
+              <option>EDI</option>
+              <option>Desktop Management (DM 2.1.x)</option>
+              <option>NLB Web Services (NLBWS3.x)</option>
+              <option>Other</option>
+            </select>
+            <label>Version</label>
+            <input type="text" id="VersionOther" />
+            <h2>Module</h2>
+            <select input id="moduleList" class="form-control">
+              <option>Acquisitions</option>
+              <option>Archives</option>
+              <option>Cataloguing</option>
+              <option>Circulation</option>
+              <option>Enquiry</option>
+              <option>ERM</option>
+              <option>Events</option>
+              <option>Serials</option>
+              <option>Home</option>
+              <option>Requests</option>
+              <option>Reports</option>
+              <option>Spydus BI</option>
+              <option>Maintenance</option>
+              <option>Mobile (e.g. SpydusGo, SpydusMobile)</option>
+              <option>File Interfaces (e.g. Web Services, API)</option>
+              <option>Self Service</option>
+              <option>OPAC/WPAC</option>
+              <option>eResources /eVendors</option>
+              <option>Payment gateway (e.g. Paypal, EPAY)</option>
+              <option>Circulation Office</option>
+              <option>Payment gateway (e.g. Paypal, EPAY)</option>
+              <option>Other (Please specify below)</option>
+            </select>
+            <label>Other</label>
+            <input type="text" id="moduleListOther" />
+            <h2>Login User Profile</h2>
+
+            <textarea
+              placeholder="User login details if the incident is specific to a user/login. Borrower details – ID/password where applicable on customers TEST/LIVE system if only replicated onsite. If not supply the QA borrower (ID/password) used to repeat the bug."
+              id="lUP"
+              style="height: 300px;"
+            ></textarea>
+
+            <h2>How many users impacted</h2>
+            <select id="uI">
+              <option>One</option>
+              <option>Multiple</option>
+              <option>All Users</option>
+            </select>
+            <h2>Replication Env.</h2>
+            <label>Link</label>
+
+            <input type="text" id="link" />
+            <label>Enviroment</label>
+
+            <select id="env">
+              <option>Live</option>
+              <option>Test</option>
+              <option>Other</option>
+            </select>
+            <label>Tested in QA? </label>
+            <label id="tested">
+              <input id="y" type="radio" name="optradio" />Yes
+            </label>
+            <label class="radio-inline">
+              <input id="n" type="radio" name="optradio" />No
+            </label>
+            <label>QA Version & Server</label>
+            <input type="text" id="qVS" />
+            <h2>Title</h2>
+            <textarea
+              placeholder="Enter a brief description of the issue and error messages encountered."
+              id="Title"
+              class="form-control"
+              rows="3"
+            ></textarea>
+            <h2>Description</h2>
+            <textarea
+              style="height: 300px;"
+              placeholder="Enter the details of the issue reported, it’s useful to know the impact to Customer(s). If the customer anecdotally explains how this is impacting their business function it can be documented here, to let development know that impact, so they can prioritise the issue"
+              id="Description"
+              class="form-control"
+              rows="3"
+            ></textarea>
+            <h2>System Info</h2>
+            <textarea
+              style="height: 300px;"
+              placeholder="This is where to store information about all of the software versions. It assists development to baseline where something might have gone wrong. Version information will have been captured at the top here you can provide supplementary information. Did it ever work and if so does the customer recall what WBA/server version?"
+              id="SystemInfo"
+              class="form-control"
+              rows="3"
+            ></textarea>
+            <h2>Replication Steps</h2>
+            <label>Expected Outcome</label>
+            <textarea
+              id="expected"
+              style="height: 300px;"
+              placeholder="Steps to perform and the desired result the customer expects:"
+              id="Description"
+              class="form-control"
+            ></textarea>
+            <label>Actual Outcome</label>
+            <textarea
+              id="actual"
+              style="height: 300px;"
+              placeholder="Steps performed and the result the customer is experiencing:"
+              id="Description"
+              class="form-control"
+            ></textarea>
+
+            <input class="button" id="submit" value="Submit" />
+          </fieldset>
+        </form>
+      </div>
+
+      <div class="column column-33">
+        <label>Copy and paste the below into your ticket</label>
+        <h3>CON</h3>
+        <p id="CONL"></p>
+        <h3>AN</h3>
+        <p id="ANL"></p>
+        <h3>RD</h3>
+        <p id="RDL"></p>
+        <h3>SV</h3>
+        <p id="SVL"></p>
+        <h3>OSV</h3>
+        <p id="OSVL"></p>
+        <h3>LUP</h3>
+        <p id="LUPL"></p>
+        <h3>MUI</h3>
+        <p id="MUIL"></p>
+        <h3>LINK</h3>
+        <p id="LINKL"></p>
+        <h3>ENV</h3>
+        <p id="ENVL"></p>
+        <h3>YES</h3>
+        <p id="YESL"></p>
+        <h3>NO</h3>
+        <p id="NOL"></p>
+        <h3>QAVS</h3>
+        <p id="QAVSL"></p>
+        <h3>TITLE</h3>
+        <p id="TITLEL"></p>
+        <h3>DESC</h3>
+        <p id="DESCL"></p>
+        <h3>SINFO</h3>
+        <p id="SINFOL"></p>
+        <h3>EO</h3>
+        <p id="EOL"></p>
+        <h3>AO</h3>
+        <p id="AOL"></p>
+      </div>
+    </div>
+  </body>
+  
+  <script src="javascript/prForm.js"></script>
+</html>

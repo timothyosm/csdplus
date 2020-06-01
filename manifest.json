@@ -1,40 +1,47 @@
 {
-    "name": "CSD+",
-    "version": "1",
-    "manifest_version": 2,
-    "description": "Fixin' Things",
-    "icons": {
-        "16": "icon.png"
-    },
-    "background": {
-        "scripts": [
-            "background.js"
-        ],
-        "persistent": true
-    },
-    "browser_action": {
-        "default_title": "Fixin' Things",
-        "default_popup": "popup.html"
-    },
-    "permissions": [
-        "activeTab",
-        "tabs"
+  "name": "CSD+",
+  "version": "1.2",
+  "manifest_version": 2,
+  "description": "An extension to expand the functionality of the CSD",
+  "homepage_url": "https://timothyosmond.com",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "scripts": [
+      "src/bg/background.js"
     ],
-    "content_scripts": [
-        {
-            "matches": [
-                "https://servicedesk.civica.co.uk/*"
-            ],
-            "run_at": "document_idle",
-            "js": [
-                "content.js"
-            ],
-            "css": [
-                "style.css"
-            ]
-        }
-    ],
-    "web_accessible_resources": [
-        "style.css"
-    ]
+    "persistent": true
+  },
+  "options_page": "src/options/index.html",
+  "browser_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "browser action demo",
+    "default_popup": "src/browser_action/browser_action.html"
+  },
+  "permissions": [
+    "https://servicedesk.civica.co.uk/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://servicedesk.civica.co.uk/*"
+      ],
+      "css": [
+        "src/inject/inject.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://servicedesk.civica.co.uk/*"
+      ],
+      "run_at": "document_idle",
+
+      "js": [
+        "src/inject/inject.js"
+      ]
+    }
+  ]
 }
