@@ -50,14 +50,18 @@ function setData() {
   document.querySelector("#CONL").innerHTML = CONV;
   document.querySelector("#ANL").innerHTML = ANV;
   document.querySelector("#RDL").innerHTML = RDV;
-  document.querySelector("#SVL").innerHTML = SVV;
-  document.querySelector("#OSVL").innerHTML = OSVV;
+  document.querySelector("#SVL").innerHTML = SVV +' ' + OSVV;
+  // document.querySelector("#OSVL").innerHTML = OSVV;
   document.querySelector("#LUPL").innerHTML = LUPV;
   document.querySelector("#MUIL").innerHTML = MUIV;
   document.querySelector("#LINKL").innerHTML = LINKV;
   document.querySelector("#ENVL").innerHTML = ENVV;
-  document.querySelector("#YESL").innerHTML = YESV;
-  document.querySelector("#NOL").innerHTML = NOV;
+  if(document.querySelector("#y").checked == true){
+    document.querySelector("#YESL").innerHTML = "Yes"
+  } else {
+    document.querySelector("#YESL").innerHTML = "No"
+
+  }
   document.querySelector("#QAVSL").innerHTML = QAVSV;
   document.querySelector("#TITLEL").innerHTML = TITLEV;
   document.querySelector("#DESCL").innerHTML = DESCV;
