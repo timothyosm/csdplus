@@ -1,109 +1,150 @@
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>CSD+</title>
-    <link rel="stylesheet" href="CSS/milligram.css">
+    <link rel="stylesheet" href="CSS/milligram.css" />
     <script src="background.js"></script>
-
-</head>
-<style>
+  </head>
+  <style>
     body {
-        width: 500px;
-        padding-top: 15px;
-        padding-left: 15px;
-        padding-right: 15px;
-        background-color: whitesmoke;
+      width: 500px;
+      padding-top: 15px;
+      padding-left: 15px;
+      padding-right: 15px;
+      background-color: whitesmoke;
     }
 
     footer {
-        color: whitesmoke;
-        background-color: #343A40;
-        bottom: 0px;
-        padding: 5px;
-        margin-left: -15px;
-        margin-right: -15px;
-        font-size: 12px;
+      color: whitesmoke;
+      background-color: #343a40;
+      bottom: 0px;
+      padding: 5px;
+      margin-left: -15px;
+      margin-right: -15px;
+      font-size: 12px;
     }
 
     #Version {
-        float: right;
-        color: whitesmoke;
-
+      float: right;
+      color: whitesmoke;
     }
 
     hr {
-        display: block;
-        height: 1px;
-        border: 0;
-        border-top: 1px solid #ccc;
-        margin: 1em 0;
-        padding: 0;
+      display: block;
+      height: 1px;
+      border: 0;
+      border-top: 1px solid #ccc;
+      margin: 1em 0;
+      padding: 0;
     }
 
     #Settings {
-        float: right;
+      float: right;
     }
 
-
     .btn-sm {
-        margin: 2px;
+      margin: 2px;
     }
 
     h5 {
-        margin-bottom: 10px;
+      margin-bottom: 10px;
     }
-</style>
+  </style>
 
-<body>
-    <a style="float: right;" href="..\options\index.html" target='_newtab'class="btn btn-dark" role="button" aria-pressed="true">User Guide</a>
+  <body>
+    <a
+      style="float: right;"
+      href="..\options\index.html"
+      target="_newtab"
+      class="btn btn-dark"
+      role="button"
+      aria-pressed="true"
+      >User Guide</a
+    >
 
     <h5>
-        Ticket Search
+      Ticket Search
     </h5>
 
     <div class="input-group">
-        <input id="ticketInput" type="text" class="form-control" placeholder="Ticket Number" aria-label="Ticket Number"
-            aria-describedby="basic-addon2" autofocus>
-        <div class="input-group-append">
-            <button class="btn btn-dark" id="submit" type="button">Search Open</button>
-            <button class="btn btn-dark" id="submitclosed" type="button">Search Closed</button>
-        </div>
+      <input
+        id="ticketInput"
+        type="text"
+        class="form-control"
+        placeholder="Ticket Number"
+        aria-label="Ticket Number"
+        aria-describedby="basic-addon2"
+        autofocus
+      />
+      <div class="input-group-append">
+        <button class="btn btn-dark" id="submit" type="button">
+          Search Open
+        </button>
+        <button class="btn btn-dark" id="submitclosed" type="button">
+          Search Closed
+        </button>
+      </div>
     </div>
 
     <div class="input-group">
-        <input id="ticketInputpr" type="text" class="form-control" placeholder="Problem Record Description"
-            aria-label="Description" aria-describedby="basic-addon2">
-        <div class="input-group-append">
-            <button class="btn btn-dark" id="submitpr" type="button">Search PR</button>
-        </div>
+      <input
+        id="ticketInputpr"
+        type="text"
+        class="form-control"
+        placeholder="Problem Record Description"
+        aria-label="Description"
+        aria-describedby="basic-addon2"
+      />
+      <div class="input-group-append">
+        <button class="btn btn-dark" id="submitpr" type="button">
+          Search PR
+        </button>
+      </div>
     </div>
     <hr />
     <h5>
-        <form action="input.html">
-            Dynamic Replies
-        </form>
+      <form action="input.html">
+        Dynamic Replies
+      </form>
     </h5>
-    <button class="btn btn-dark btn-sm" id="iReply" type="button"> No Contact</button>
-    <button class="btn btn-dark btn-sm" id="iCall" type="button">Message Left</button>
-    <button class="btn btn-dark btn-sm" id="iDb" type="button">DB request</button>
-    <button class="btn btn-dark btn-sm" id="iDev" type="button">Sent to Dev</button>
-    <button class="btn btn-dark btn-sm" id="iResponce" type="button">Initial Response</button>
-
+    <button class="btn btn-dark btn-sm" id="iReply" type="button">
+      No Contact
+    </button>
+    <button class="btn btn-dark btn-sm" id="iCall" type="button">
+      Message Left
+    </button>
+    <button class="btn btn-dark btn-sm" id="iDb" type="button">
+      DB request
+    </button>
+    <button class="btn btn-dark btn-sm" id="iDev" type="button">
+      Sent to Dev
+    </button>
+    <button class="btn btn-dark btn-sm" id="iResponce" type="button">
+      Initial Response
+    </button>
 
     <hr />
     <h5>
-        Forms
+      Forms
     </h5>
-    <a href="prform.html" target='_newtab'class="btn btn-primary active" role="button" aria-pressed="true">Problem Record</a>
+    <a
+      href="prform.html"
+      target="_newtab"
+      class="btn btn-primary active"
+      role="button"
+      aria-pressed="true"
+      >Problem Record</a
+    >
 
+    <br />
+    <br />
 
-
-    </footer>
+    <p style="font-size: xx-small;">
+      Email Timothy.Osmond@civica.com.au any issues or suggestions
+    </p>
 
     <script src="javascript/background.js"></script>
-</body>
-
+  </body>
 </html>

@@ -31,15 +31,55 @@
   <body>
     <div class="container">
       <div class="row">
-        <div class="column">CSD+ Version 1.2</div>
+        <div class="column">CSD+ Version 1.4</div>
       </div>
       <br />
       <div class="row">
         <div class="column">
           <input class="button-primary" type="submit" value="User Guide" />
-          <input class="button-primary" type="submit" value="Options" />
+          <!-- <input class="button-primary" type="submit" value="Options" /> -->
         </div>
         <div class="column column-75">
+          <h1>CSD UI improvements</h1>
+
+          <p>
+            The CSD+ Extension sits on top of the CSD and expands on its
+            functionality. The first thing you will notice is ticket
+            highlighting, see the legend below.
+          </p>
+          <table>
+            <tr>
+              <th>Red</th>
+              <th>Yellow</th>
+              <th>Blue</th>
+              <th>Purple</th>
+              <th>Pink</th>
+              <th>Green</th>
+            </tr>
+            <tr>
+              <td>Priority 1 ticket</td>
+              <td>Priority 2 ticket</td>
+              <td>Priority 3 ticket</td>
+              <td>Ticket has not been updated by Civica in a week</td>
+              <td>The Customer has updated the ticket</td>
+              <td>The Customer has not replied to the ticket in 3 weeks</td>
+            </tr>
+          </table>
+
+          <img src="img/ticketexample.jpg" />
+
+          <p>
+            The second thing you will notice is that information windows in the
+            system will now dynamically resize to fit the content. This will
+            work for any content window in the system.
+          </p>
+          <img src="img/tickerresize.jpg" />
+          <p>
+            There are smaller quality of life changes like the Active Ticket
+            counter and window load times. The active ticket counts the tickets
+            that are with us to action.
+          </p>
+          <img src="img/uichanges.png" />
           <h1>Ticket/PR search</h1>
 
           <p>
@@ -194,7 +234,10 @@
             the right hand side. Now just copy and paste this into your ticket
             body.
           </ul>
-          <p id="warning">If a required field is left blank, it will be highlighted in red when you hit submit.</p>
+          <p id="warning">
+            If a required field is left blank, it will be highlighted in red
+            when you hit submit.
+          </p>
           <img src="img/copyNpaste.png" alt="" />
         </div>
       </div>
