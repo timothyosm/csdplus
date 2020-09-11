@@ -3,11 +3,11 @@
 </template>
 
 <script>
-import HelloWorld from '@/components/HelloWorld.vue'
+import ticketSearch from '@/components/ticketSearch.vue'
 
 export default {
   name: 'App',
-  components: { HelloWorld }
+  components: { ticketSearch }
 }
 </script>
 
