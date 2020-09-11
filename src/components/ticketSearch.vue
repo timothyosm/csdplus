@@ -20,10 +20,10 @@
               <el-input size="mini" v-model="formTicket.Details"></el-input>
             </el-form-item>
             <el-form-item size="mini" id="advanced" label="End User">
-              <el-input size="mini" v-model="formTicket.endUser"></el-input>
+              <el-input  v-model="formTicket.endUser"></el-input>
             </el-form-item>
-            <el-form-item size="mini" id="advanced" label="Customer Name">
-              <el-input size="mini" v-model="formTicket.customerName"></el-input>
+            <el-form-item  id="advanced" label="Customer Name">
+              <el-input  v-model="formTicket.customerName"></el-input>
             </el-form-item>
           </el-form>
         </el-collapse-item>
