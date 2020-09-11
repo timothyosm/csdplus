@@ -1,7 +1,7 @@
 <template>
   <div>
     <el-form>
-      <el-form-item label="PR Number">
+      <el-form-item label="PR Number" label-width="105px">
         <el-input v-model="formPR.prNumber"></el-input>
       </el-form-item>
       <el-collapse size="mini" id="advanced">

@@ -1,7 +1,7 @@
 <template>
   <div>
     <el-form>
-      <el-form-item label="Ticket Number">
+      <el-form-item label="Ticket Number" label-width="105px">
         <el-input v-model="formTicket.ticketNumber"></el-input>
       </el-form-item>
       <el-collapse size="mini" id="advanced">
