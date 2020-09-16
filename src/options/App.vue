@@ -1,13 +1,13 @@
 <template>
-  <hello-world />
+  <TicketSearch />
 </template>
 
 <script>
-import ticketSearch from '@/components/ticketSearch.vue'
+import TicketSearch from '@/components/ticketSearch.vue'
 
 export default {
   name: 'App',
-  components: { ticketSearch }
+  components: { TicketSearch }
 }
 </script>
 

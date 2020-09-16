@@ -42,19 +42,19 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       formPR: {
-        prNumber: "",
-        prDesc: "",
-        Summary: "",
-        Details: "",
-        endUser: "",
-        customerName: "",
-      },
-    };
-  },
-};
+        prNumber: '',
+        prDesc: '',
+        Summary: '',
+        Details: '',
+        endUser: '',
+        customerName: ''
+      }
+    }
+  }
+}
 </script>
 
 <style scoped>

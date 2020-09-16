@@ -1,5 +1,5 @@
 <template>
-  <hello-world />
+  <ticketSearch />
 </template>
 
 <script>

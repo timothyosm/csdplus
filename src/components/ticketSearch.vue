@@ -48,19 +48,19 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       formTicket: {
-        ticketNumber: "",
-        prDesc: "",
-        Summary: "",
-        Details: "",
-        endUser: "",
-        customerName: "",
-      },
-    };
-  },
-};
+        ticketNumber: '',
+        prDesc: '',
+        Summary: '',
+        Details: '',
+        endUser: '',
+        customerName: ''
+      }
+    }
+  }
+}
 </script>
 
 <style scoped>
