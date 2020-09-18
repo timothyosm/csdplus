@@ -1,19 +1,17 @@
 <template>
-  <TicketSearch />
+  <div>
+    <p>Hello world!</p>
+  </div>
 </template>
 
 <script>
-import TicketSearch from '@/components/ticketSearch.vue'
-
 export default {
   name: 'App',
-  components: { TicketSearch }
-}
+};
 </script>
 
-<style>
-html {
-  width: 400px;
-  height: 400px;
+<style scoped>
+p {
+  font-size: 20px;
 }
 </style>

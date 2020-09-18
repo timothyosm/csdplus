@@ -1,35 +1,35 @@
 {
+  "name": "CSD+",
+  "description": "An extension to expand the functionality of the CSD",
+  "version": 1.5,
   "manifest_version": 2,
-  "name": "__MSG_extName__",
-  "homepage_url": "http://localhost:8080/",
-  "description": "A Vue Browser Extension",
-  "default_locale": "en",
-  "permissions": [
-    "activeTab",
-    "<all_urls>",
-    "*://*/*"
-  ],
+  "homepage_url": "https://timothyosmond.com",
   "icons": {
-    "16": "icons/16.png",
-    "48": "icons/48.png",
-    "128": "icons/128.png"
-  },
-  "background": {
-    "scripts": [
-      "js/background.js"
-    ],
-    "persistent": false
+    "48": "icons/icon_48.png",
+    "128": "icons/icon_128.png"
   },
   "browser_action": {
-    "default_popup": "popup.html",
-    "default_title": "__MSG_extName__",
-    "default_icon": {
-      "19": "icons/19.png",
-      "38": "icons/38.png"
-    }
+    "default_title": "CSD+",
+    "default_popup": "popup/popup.html"
+  },
+  "background": {
+    "scripts": ["background.js", "popup.js"],
+    "persistent": true
   },
   "options_ui": {
-    "page": "options.html",
-    "browser_style": true
-  }
+    "page": "options/options.html",
+    "chrome_style": true
+  },
+  "permissions": ["storage", "activeTab"],
+  "content_scripts": [{
+    "matches": [
+      "https://servicedesk.civica.co.uk/*"
+    ],
+
+    "run_at": "document_end",
+
+    "js": [
+      "inject.js"
+    ]
+  }]
 }
