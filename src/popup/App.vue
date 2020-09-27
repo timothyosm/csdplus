@@ -16,7 +16,7 @@ export default {
 }
 #popUp {
   width: 525px;
-  min-height: 500px;
+  min-height: 700px;
 }
 
 body {

@@ -3,8 +3,7 @@ import Forms from './pages/forms';
 import PRform from './pages/PRform';
 import ReplyEntry from './pages/components/replyEntry';
 import Edit from './pages/components/edit';
-import Enumerator from './pages/components/enumerator';
-import EditEnum from './pages/components/editEnum';
+
 
 
 export default [{
@@ -28,13 +27,6 @@ export default [{
     path: '/edit',
     component: Edit,
   },
-  {
-    path: '/enumerator',
-    component: Enumerator,
-  },
-  {
-    path: '/editEnum',
-    component: EditEnum,
-  },
+
 
 ];

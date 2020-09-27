@@ -23,7 +23,7 @@
               autocomplete="off"
             ></el-input>
           </el-form-item>
-          <br>
+          <br />
           <el-form-item>
             <el-button
               id="submitButton"
@@ -40,11 +40,9 @@
             >Delete</el-button>
           </el-form-item>
         </el-form>
-                <el-divider>
-          <!-- <i class="el-icon-star-on"></i> -->
-        </el-divider>
       </el-col>
     </el-row>
+    <hr />
   </div>
 </template>
 
@@ -55,7 +53,7 @@ export default {
   name: 'App',
   components: { Menu },
   data() {
-    let data = JSON.parse(localStorage.getItem('reply'));
+    var data = JSON.parse(localStorage.getItem('reply'));
     return {
       products: data,
       ValidateForm: {
@@ -74,7 +72,7 @@ export default {
       // this.$refs[formName].validate(valid => {
       // if (valid) {
 
-      let data = JSON.parse(localStorage.getItem('reply'));
+      var data = JSON.parse(localStorage.getItem('reply'));
       data.splice(index, 1, { title: title, text: reply }); //remove data[i]
       localStorage.setItem('reply', JSON.stringify(data));
 
@@ -95,7 +93,7 @@ export default {
       // });
     },
     deleteForm(index) {
-      let data = JSON.parse(localStorage.getItem('reply'));
+      var data = JSON.parse(localStorage.getItem('reply'));
       data.splice(index, 1);
       localStorage.setItem('reply', JSON.stringify(data));
       this.$notify({

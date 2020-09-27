@@ -1,7 +1,7 @@
 {
   "name": "CSD+",
   "description": "An extension to expand the functionality of the CSD",
-  "version": 1.5,
+  "version": "1.0.0",
   "manifest_version": 2,
   "homepage_url": "https://timothyosmond.com",
   "icons": {
@@ -13,23 +13,29 @@
     "default_popup": "popup/popup.html"
   },
   "background": {
-    "scripts": ["background.js", "popup.js"],
+    "scripts": [
+      "background.js",
+      "popup.js",
+      "payload.js"
+    ],
     "persistent": true
   },
   "options_ui": {
     "page": "options/options.html",
     "chrome_style": true
   },
-  "permissions": ["storage", "activeTab"],
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
   "content_scripts": [{
     "matches": [
       "https://servicedesk.civica.co.uk/*"
     ],
-
     "run_at": "document_end",
-
     "js": [
-      "inject.js"
+      "inject.js",
+      "payload.js"
     ]
   }]
 }

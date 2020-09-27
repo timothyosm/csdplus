@@ -8,37 +8,32 @@ var g = document.querySelector("#mainForm-CreationUserTitleDisplay");
 var h = document.querySelector("#mainForm-CreationUserDisplay");
 
 if (typeof a != undefined && a != null) {
-  var analystName = document.getElementById("mainForm-_CreateUserDisplay")
-    .value;
+    var analystName = document.getElementById("mainForm-_CreateUserDisplay")
+        .value;
 } else if (typeof b != undefined && b != null) {
-  var analystName = document.getElementById("mainForm-UserTitleDisplay").value;
+    var analystName = document.getElementById("mainForm-UserTitleDisplay").value;
 } else if (typeof g != undefined && g != null) {
-  var analystName = document.querySelector("#mainForm-CreationUserTitleDisplay")
-    .value;
+    var analystName = document.querySelector("#mainForm-CreationUserTitleDisplay")
+        .value;
 } else if (typeof h != undefined && h != null) {
-  var analystName = document.querySelector("#mainForm-CreationUserDisplay")
-    .value;
+    var analystName = document.querySelector("#mainForm-CreationUserDisplay")
+        .value;
 }
 
 if (typeof c != undefined && c != null) {
-  var fullCustname = document.getElementById("mainForm-_RaisedUserTitle").value;
-  var customerName = fullCustname.split(" ")[0];
+    var fullCustname = document.getElementById("mainForm-_RaisedUserTitle").value;
+    var customerName = fullCustname.split(" ")[0];
 }
 if (typeof d != undefined && d != null) {
-  var ticket = document.getElementById("mainForm-_ProcessRef").innerHTML;
+    var ticket = document.getElementById("mainForm-_ProcessRef").innerHTML;
 }
 
-let timeToReturn = new Date();
-timeToReturn.setMilliseconds(
-  Math.round(timeToReturn.getMilliseconds() / 1000) * 1000
-);
-timeToReturn.setSeconds(Math.round(timeToReturn.getSeconds() / 60) * 60);
-timeToReturn.setMinutes(Math.round(timeToReturn.getMinutes() / 15) * 15);
+var timeToReturn = new Date().toLocaleTimeString()
 
 chrome.runtime.sendMessage({
-  analystName: analystName,
-  fullCustname: fullCustname,
-  customerName: customerName,
-  ticket: ticket,
-  timeToReturn: timeToReturn,
+    analystName: analystName,
+    fullCustname: fullCustname,
+    customerName: customerName,
+    ticket: ticket,
+    timeToReturn: timeToReturn,
 });

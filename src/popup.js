@@ -8,6 +8,6 @@ window.addEventListener('load', function (evt) {
 // Listen to messages from the payload.js script and write to popout.html
 chrome.runtime.onMessage.addListener(function (message) {
 	console.log(message)
-	localStorage.setItem('7566887b-6c8e-4f43-a469-59f0a26162a6', JSON.stringify(message));
+	localStorage.setItem('payload', JSON.stringify(message));
 
 });
