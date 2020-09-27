@@ -19,11 +19,8 @@
           <el-form-item label="Title" prop="title" :rules="[{ required: true, message: 'Title is required' }]">
             <el-input id="title" type="age" v-model.number="ValidateForm.title" autocomplete="off"></el-input>
           </el-form-item>
-
           <el-button @click="shortcut(code.code)" type="success" size="mini" :model="tableData" v-for="(code, index) in tableData" v-bind:key="tableData">
-            {{ code.field }}</el-button
-          >
-
+            {{ code.field }}</el-button>
           <el-form-item label="Reply" prop="reply" :rules="[{ required: true, message: 'Reply is required' }]">
             <el-input id="reply" type="textarea" v-model.number="ValidateForm.reply" autocomplete="off" placeholder="Hello <CustFirstName>!"></el-input>
           </el-form-item>
