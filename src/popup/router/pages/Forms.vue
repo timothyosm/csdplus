@@ -12,7 +12,7 @@
               style="float: right; margin: 3px"
               type="success"
               target="_target"
-              href="chrome-extension://mblkeabkdkdonjbhohdbkfommfeoeobk/popup/popup.html#/PRform"
+              href='chrome-extension://' + window.location.host + ' /popup/popup.html#/PRform'
             >Go to Form</el-link>
           </div>
           <div>Use this form when creating a problem record.</div>
