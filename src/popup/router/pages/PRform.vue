@@ -11,47 +11,21 @@
             id="formItem"
             prop="customerOrganisationName"
             label="Customer Organisation Name"
-            :rules="[
-      { required: true, message: 'Please input a Customer Organisation Name', trigger: 'blur' }
-    ]"
+            :rules="[{ required: true, message: 'Please input a Customer Organisation Name', trigger: 'blur' }]"
           >
             <el-input v-model="prForm.customerOrganisationName"></el-input>
           </el-form-item>
 
-          <el-form-item
-            size="mini"
-            id="formItem"
-            prop="analystName"
-            label="Analyst Name"
-            :rules="[
-      { required: true, message: 'Please input an Analyst Name', trigger: 'blur' }
-    ]"
-          >
+          <el-form-item size="mini" id="formItem" prop="analystName" label="Analyst Name" :rules="[{ required: true, message: 'Please input an Analyst Name', trigger: 'blur' }]">
             <el-input v-model="prForm.analystName"></el-input>
           </el-form-item>
 
-          <el-form-item
-            size="mini"
-            prop="date"
-            label="Replication Date"
-            :rules="[
-      { required: true, message: 'Please input a Replication Date', trigger: 'blur' }
-    ]"
-          >
-            <el-date-picker
-              type="date"
-              placeholder="Pick a date"
-              v-model="prForm.date"
-              style="width: 100%;"
-            ></el-date-picker>
+          <el-form-item size="mini" prop="date" label="Replication Date" :rules="[{ required: true, message: 'Please input a Replication Date', trigger: 'blur' }]">
+            <el-date-picker type="date" placeholder="Pick a date" v-model="prForm.date" style="width: 100%;"></el-date-picker>
           </el-form-item>
           <h2>Version and Site Information</h2>
           <el-form-item size="mini" label="Product Version">
-            <el-select
-              v-model="prForm.productVersion"
-              placeholder="please select the Product Version"
-              style="width: 100%;"
-            >
+            <el-select v-model="prForm.productVersion" placeholder="please select the Product Version" style="width: 100%;">
               <el-option label="Spydus WBA (W10.x)" value="Spydus WBA (W10.x)"></el-option>
               <el-option label="Spydus Server (10.x)" value="Spydus Server (10.x)"></el-option>
               <el-option label="Spydus Tray (ST1.x)" value="Spydus Tray (ST1.x)"></el-option>
@@ -60,10 +34,7 @@
               <el-option label="Thick Client (10.x)" value="Thick Client (10.x)"></el-option>
               <el-option label="Circulation Offline" value="Circulation Offline"></el-option>
               <el-option label="EDI" value="EDI"></el-option>
-              <el-option
-                label="Desktop Management (DM 2.1.x)"
-                value="Desktop Management (DM 2.1.x)"
-              ></el-option>
+              <el-option label="Desktop Management (DM 2.1.x)" value="Desktop Management (DM 2.1.x)"></el-option>
               <el-option label="NLB Web Services (NLBWS3.x)" value="NLB Web Services (NLBWS3.x)"></el-option>
               <el-option label="Other" value="Other"></el-option>
             </el-select>
@@ -74,11 +45,7 @@
           </el-form-item>
 
           <el-form-item size="mini" label="Module">
-            <el-select
-              v-model="prForm.module"
-              placeholder="please select the Module"
-              style="width: 100%;"
-            >
+            <el-select v-model="prForm.module" placeholder="please select the Module" style="width: 100%;">
               <el-option label="Acquisitions" value="Acquisitions"></el-option>
               <el-option label="Archives" value="Archives"></el-option>
               <el-option label="Cataloguing" value="Cataloguing"></el-option>
@@ -92,37 +59,27 @@
               <el-option label="Reports" value="Reports"></el-option>
               <el-option label="Spydus BI" value="Spydus BI"></el-option>
               <el-option label="Maintenance" value="Maintenance"></el-option>
-              <el-option
-                label="Mobile (e.g. SpydusGo, SpydusMobile)"
-                value="Mobile (e.g. SpydusGo, SpydusMobile)"
-              ></el-option>
-              <el-option
-                label="File Interfaces (e.g. Web Services, API)"
-                value="File Interfaces (e.g. Web Services, API)"
-              ></el-option>
+              <el-option label="Mobile (e.g. SpydusGo, SpydusMobile)" value="Mobile (e.g. SpydusGo, SpydusMobile)"></el-option>
+              <el-option label="File Interfaces (e.g. Web Services, API)" value="File Interfaces (e.g. Web Services, API)"></el-option>
               <el-option label="Self Service" value="Self Service"></el-option>
               <el-option label="OPAC/WPAC" value="OPAC/WPAC"></el-option>
               <el-option label="eResources /eVendors" value="eResources /eVendors"></el-option>
-              <el-option
-                label="Payment gateway (e.g. Paypal, EPAY)"
-                value="Payment gateway (e.g. Paypal, EPAY)"
-              ></el-option>
+              <el-option label="Payment gateway (e.g. Paypal, EPAY)" value="Payment gateway (e.g. Paypal, EPAY)"></el-option>
               <el-option label="Circulation Office" value="Circulation Office"></el-option>
               <el-option label="Other (Please specify below)" value="Other"></el-option>
             </el-select>
           </el-form-item>
 
-          <el-form-item
-            size="mini"
-            prop="otherModule"
-            label="Other Module"
-            v-if="prForm.module === 'Other'"
-          >
+          <el-form-item size="mini" prop="otherModule" label="Other Module" v-if="prForm.module === 'Other'">
             <el-input v-model="prForm.otherModule"></el-input>
           </el-form-item>
 
           <el-form-item size="mini" prop="loginUserProfile" label="Login User Profile">
-            <el-input v-model="prForm.loginUserProfile" type="textarea"></el-input>
+            <el-input
+              placeholder="User login details if the incident is specific to a user/login. Borrower details – ID/password where applicable on customers TEST/LIVE system if only replicated onsite. If not supply the QA borrower (ID/password) used to repeat the bug."
+              v-model="prForm.loginUserProfile"
+              type="textarea"
+            ></el-input>
           </el-form-item>
 
           <el-form-item size="mini" label="Number of Impacted Users" prop="impactedUsers">
@@ -133,14 +90,7 @@
             </el-radio-group>
           </el-form-item>
 
-          <el-form-item
-            size="mini"
-            prop="link"
-            label="Link"
-            :rules="[
-      { required: true, message: 'Please input a Link', trigger: 'blur' }
-    ]"
-          >
+          <el-form-item size="mini" prop="link" label="Link" :rules="[{ required: true, message: 'Please input a Link', trigger: 'blur' }]">
             <el-input v-model="prForm.link"></el-input>
           </el-form-item>
 
@@ -152,23 +102,11 @@
             </el-radio-group>
           </el-form-item>
 
-          <el-form-item
-            size="mini"
-            prop="otherEnviroment"
-            label="Other Enviroment"
-            v-if="prForm.enviroment === 'Other'"
-          >
+          <el-form-item size="mini" prop="otherEnviroment" label="Other Enviroment" v-if="prForm.enviroment === 'Other'">
             <el-input v-model="prForm.otherEnviroment"></el-input>
           </el-form-item>
 
-          <el-form-item
-            size="mini"
-            label="Tested in QA?"
-            prop="qaTested"
-            :rules="[
-      { required: true, message: 'Please Specify if this was tested in QA', trigger: 'blur' }
-    ]"
-          >
+          <el-form-item size="mini" label="Tested in QA?" prop="qaTested" :rules="[{ required: true, message: 'Please Specify if this was tested in QA', trigger: 'blur' }]">
             <el-radio-group v-model="prForm.qaTested" size="mini" style="width: 100%;">
               <el-radio border label="Yes"></el-radio>
               <el-radio border label="No"></el-radio>
@@ -178,26 +116,13 @@
 
         <el-col :span="8">
           <h2>Problem Information</h2>
-          <el-form-item
-            size="mini"
-            prop="title"
-            label="Title"
-            :rules="[
-      { required: true, message: 'Please input a Title', trigger: 'blur' }
-    ]"
-          >
+          <el-form-item size="mini" prop="title" label="Title" :rules="[{ required: true, message: 'Please input a Title', trigger: 'blur' }]">
             <el-input v-model="prForm.title"></el-input>
           </el-form-item>
 
-          <el-form-item
-            size="mini"
-            prop="description"
-            label="Description"
-            :rules="[
-      { required: true, message: 'Please input a description', trigger: 'blur' }
-    ]"
-          >
+          <el-form-item size="mini" prop="description" label="Description" :rules="[{ required: true, message: 'Please input a description', trigger: 'blur' }]">
             <quill-editor
+              placeholder="Enter the details of the issue reported, it’s useful to know the impact to Customer(s). If the customer anecdotally explains how this is impacting their business function it can be documented here, to let development know that impact, so they can prioritise the issue"
               style="margin-top:50px;"
               ref="myQuillEditor"
               v-model="prForm.description"
@@ -208,14 +133,7 @@
             />
           </el-form-item>
 
-          <el-form-item
-            size="mini"
-            prop="systemInfo"
-            label="System Info"
-            :rules="[
-      { required: true, message: 'Please input System Info', trigger: 'blur' }
-    ]"
-          >
+          <el-form-item size="mini" prop="systemInfo" label="System Info" :rules="[{ required: true, message: 'Please input System Info', trigger: 'blur' }]">
             <quill-editor
               style="margin-top:50px;"
               ref="myQuillEditor"
@@ -227,14 +145,7 @@
             />
           </el-form-item>
 
-          <el-form-item
-            size="mini"
-            prop="expectedOutcome"
-            label="Expected Outcome"
-            :rules="[
-      { required: true, message: 'Please input Expected Outcome', trigger: 'blur' }
-    ]"
-          >
+          <el-form-item size="mini" prop="expectedOutcome" label="Expected Outcome" :rules="[{ required: true, message: 'Please input Expected Outcome', trigger: 'blur' }]">
             <quill-editor
               style="margin-top:50px;"
               ref="myQuillEditor"
@@ -246,14 +157,7 @@
             />
           </el-form-item>
 
-          <el-form-item
-            size="mini"
-            prop="actualOutcome"
-            label="Actual Outcome"
-            :rules="[
-      { required: true, message: 'Please input Actual Outcome', trigger: 'blur' }
-    ]"
-          >
+          <el-form-item size="mini" prop="actualOutcome" label="Actual Outcome" :rules="[{ required: true, message: 'Please input Actual Outcome', trigger: 'blur' }]">
             <quill-editor
               style="margin-top:50px;"
               ref="myQuillEditor"
@@ -268,74 +172,69 @@
         <el-col :span="8">
           <el-card class="box-card">
             <div slot="header" class="clearfix">
-              <span>Form</span>
-              <el-button
-                style="float: right; padding: 3px 0"
-                type="text"
-                @click="submitForm('form')"
-              >Send form to clipboard</el-button>
+              <el-button style="float: right; padding: 3px 0" type="text" @click="submitForm('form')">Send form to clipboard</el-button>
             </div>
 
             <div id="formCont">
               <div v-if="prForm.customerOrganisationName !== ''">
                 <h3>Customer Organisation Name</h3>
-                <p>{{prForm.customerOrganisationName}}</p>
+                <p>{{ prForm.customerOrganisationName }}</p>
               </div>
               <div v-if="prForm.analystName !== ''">
                 <h3>Analyst Name</h3>
-                <p>{{prForm.analystName}}</p>
+                <p>{{ prForm.analystName }}</p>
               </div>
               <div v-if="prForm.date !== ''">
                 <h3>Replication Date</h3>
-                <p>{{prForm.date}}</p>
+                <p>{{ prForm.date }}</p>
               </div>
               <div v-if="prForm.productVersion !== ''">
                 <h3>Product Version</h3>
-                <p>{{prForm.productVersion}}</p>
+                <p>{{ prForm.productVersion }}</p>
               </div>
               <div v-if="prForm.version !== ''">
                 <h3>Product Version</h3>
-                <p>{{prForm.version}}</p>
+                <p>{{ prForm.version }}</p>
               </div>
               <div v-if="prForm.module !== ''">
                 <h3>Module</h3>
-                <p>{{prForm.module}}</p>
+                <p>{{ prForm.module }}</p>
               </div>
               <div v-if="prForm.otherModule !== ''">
                 <h3>Other Module</h3>
-                <p>{{prForm.otherModule}}</p>
+                <p>{{ prForm.otherModule }}</p>
               </div>
               <div v-if="prForm.loginUserProfile !== ''">
                 <h3>Login User Profile</h3>
-                <p>{{prForm.loginUserProfile}}</p>
+                <p>{{ prForm.loginUserProfile }}</p>
               </div>
               <div v-if="prForm.impactedUsers !== ''">
                 <h3>Impacted Users</h3>
-                <p>{{prForm.impactedUsers}}</p>
+                <p>{{ prForm.impactedUsers }}</p>
               </div>
               <div v-if="prForm.impactedUsers !== ''">
                 <h3>Impacted Users</h3>
-                <p>{{prForm.impactedUsers}}</p>
+                <p>{{ prForm.impactedUsers }}</p>
               </div>
               <div v-if="prForm.link !== ''">
                 <h3>Link</h3>
-                <p>{{prForm.link}}</p>
+                <p>{{ prForm.link }}</p>
               </div>
               <div v-if="prForm.enviroment !== ''">
                 <h3>Enviroment</h3>
-                <p>{{prForm.enviroment}}</p>
+                <p>{{ prForm.enviroment }}</p>
               </div>
               <div v-if="prForm.otherEnviroment !== ''">
                 <h3>Other Enviroment</h3>
-                <p>{{prForm.otherEnviroment}}</p>
+                <p>{{ prForm.otherEnviroment }}</p>
               </div>
               <div v-if="prForm.qaTested !== ''">
                 <h3>Tested in QA?</h3>
-                <p>{{prForm.qaTested}}</p>
+                <p>{{ prForm.qaTested }}</p>
               </div>
               <div v-if="prForm.title !== ''">
                 <h3>Title</h3>
-                <p>{{prForm.title}}</p>
+                <p>{{ prForm.title }}</p>
               </div>
               <div v-if="prForm.description !== ''">
                 <h3>Description</h3>
@@ -446,10 +345,13 @@ export default {
 </script>
 
 <style scoped>
+#container > form > div > div:nth-child(1) > div:nth-child(9) > div > div > textarea {
+  min-height: 4.375rem;
+  height: 4.375rem;
+}
 #container {
   margin: 20px;
 }
-
 
 .text {
   font-size: 14px;

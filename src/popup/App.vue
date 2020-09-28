@@ -10,6 +10,11 @@ export default {
 };
 </script>
 <style>
+#container > form > div > div:nth-child(1) > div:nth-child(9) > div > div > textarea {
+  min-height: 4.375rem;
+  height: 4.375rem;
+}
+
 #buttons {
   padding: 2px;
   display: inline-block;
