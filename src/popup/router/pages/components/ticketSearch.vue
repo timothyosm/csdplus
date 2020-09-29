@@ -1,6 +1,5 @@
 <template>
   <div>
-    <br />
     <el-form>
       <el-form-item label="Ticket Number" label-width="110px">
         <el-input size="mini" v-model="formTicket.ticketNumber" ></el-input>

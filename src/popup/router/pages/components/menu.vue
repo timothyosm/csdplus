@@ -1,7 +1,6 @@
 <template>
   <div>
     <el-menu
-      default-active="1"
       class="menu"
       @open="handleOpen"
       @close="handleClose"

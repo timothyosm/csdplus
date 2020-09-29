@@ -5,14 +5,19 @@
         <Menu></Menu>
       </el-col>
       <el-col :span="20">
-        <h4>Ticket Search</h4>
-        <TicketSearch></TicketSearch>
-        <br />
-        <PRSearch></PRSearch>
-        <el-divider>
-        </el-divider>
-        <h4>Stored Replies</h4>
-        <ReplyButtons></ReplyButtons>
+        <el-card class="box-card">
+          <div slot="header" class="clearfix">
+            <span><i class="el-icon-search"></i>  Ticket & PR Search</span>
+          </div>
+          <TicketSearch></TicketSearch>
+          <PRSearch></PRSearch>
+        </el-card>
+        <el-card id="lastBox" class="box-card">
+          <div slot="header" class="clearfix">
+            <span><i class="el-icon-document-copy"></i>  Smart Replies</span>
+          </div>
+          <ReplyButtons></ReplyButtons>
+        </el-card>
       </el-col>
     </el-row>
   </div>

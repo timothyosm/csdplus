@@ -4,8 +4,6 @@
       <el-popover placement="top-start" width="200" trigger="hover" v-bind:content="product.text">
         <el-button
           id="mainButton"
-          type="success"
-          plain
           v-on:click="copier(product.title, product.text, index)"
           class="price"
           slot="reference"

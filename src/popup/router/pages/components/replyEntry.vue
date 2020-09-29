@@ -6,21 +6,26 @@
       </el-col>
       <el-col :span="20">
         <el-form :model="ValidateForm" ref="ValidateForm" class="demo-ruleForm">
-          <br />
-          <el-card>
-            <div slot="header" class="clearfix">
-              <span><b>Need help?</b></span>
-              <el-button style="float: right; padding: 3px 0" type="text">Click here</el-button>
-            </div>
-            <p v-if="active === 1">1</p>
-            <br />
-            <el-button size="mini" style="margin-top: 12px;" @click="next">Next step</el-button>
-          </el-card>
+          <el-collapse accordion>
+            <el-collapse-item name="1">
+              <template slot="title"> <i class="el-icon-question"></i> Need Help? Click Here!</template>
+
+              <ol>
+                <li>Enter a short Title</li>
+                <li>
+                  Type out your message, use the field buttons to add a dynamic field. This scrapes the data from the CSD when you click the button on the home page. For example
+                  <code><span>&#60;</span>customerFirstName<span>&#62;</span></code> will be replaced with the customers first name when the reply is sent to your clipboard.
+                </li>
+                <li>Go back to the homepage and you can now use your smart reply!</li>
+              </ol>
+            </el-collapse-item>
+          </el-collapse>
+
           <el-form-item label="Title" prop="title" :rules="[{ required: true, message: 'Title is required' }]">
             <el-input id="title" type="age" v-model.number="ValidateForm.title" autocomplete="off"></el-input>
           </el-form-item>
-          <el-button @click="shortcut(code.code)" type="success" size="mini" :model="tableData" v-for="(code, index) in tableData" v-bind:key="tableData">
-            {{ code.field }}</el-button>
+          <br />
+          <el-button @click="shortcut(code.code)" size="mini" :model="tableData" v-for="(code, index) in tableData" v-bind:key="tableData"> {{ code.field }}</el-button>
           <el-form-item label="Reply" prop="reply" :rules="[{ required: true, message: 'Reply is required' }]">
             <el-input id="reply" type="textarea" v-model.number="ValidateForm.reply" autocomplete="off" placeholder="Hello <CustFirstName>!"></el-input>
           </el-form-item>
@@ -33,13 +38,6 @@
           </el-form-item>
         </el-form>
       </el-col>
-      <!-- <template>
-        <el-table :v-if="tableData[0].example !== null" :data="tableData" stripe>
-          <el-table-column prop="code" label="Code"></el-table-column>
-          <el-table-column prop="field" label="Field"></el-table-column>
-          <el-table-column prop="example" label="Example"></el-table-column>
-        </el-table>
-      </template> -->
     </el-row>
   </div>
 </template>
@@ -55,7 +53,6 @@ export default {
   components: { Menu },
   data() {
     return {
-      active: 0,
       tableData: [
         {
           code: '<name>',
@@ -86,9 +83,6 @@ export default {
   },
 
   methods: {
-    next() {
-      if (this.active++ > 4) this.active = 0;
-    },
     shortcut(text) {
       var textValue = document.querySelector('#reply').value;
       var combinedValue = textValue + text;

@@ -16,45 +16,48 @@ export default {
 }
 
 #buttons {
-  padding: 2px;
+  padding: 0.125rem;
   display: inline-block;
 }
 #popUp {
-  width: 525px;
-  min-height: 700px;
+  width: 32.8125rem;
 }
 
 body {
-  margin-left: 0px;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-left: 0rem;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+
+#lastBox {
+  margin-bottom: 25px;
 }
 
 .el-menu--collapse {
-  height: 500px;
+  height: 100vh;
 }
 .el-collapse {
-  border-top: 0px solid #ebeef5 !important;
-  border-bottom: 0px solid #ebeef5 !important;
+  border-top: 0rem solid #ebeef5 !important;
+  border-bottom: 0rem solid #ebeef5 !important;
 }
 
 .el-collapse-item__header {
-  border-top: 0px solid #ebeef5 !important;
-  border-bottom: 0px solid #ebeef5 !important;
+  border-top: 0rem solid #ebeef5 !important;
+  border-bottom: 0rem solid #ebeef5 !important;
 }
 
 .el-form-item {
-  margin-bottom: 0px !important;
+  margin-bottom: 0rem !important;
 }
 
 .el-form-item__label {
-  margin-top: 10px;
+  margin-top: 0.625rem;
 }
 #replyEdit {
-  height: 100px;
+  height: 6.25rem;
 }
 #reply {
-  height: 250px;
+  height: 15.625rem;
 }
 a:link {
   text-decoration: none;
