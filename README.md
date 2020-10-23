@@ -1,8 +1,6 @@
 ## Usage
 
 ```bash
-$ vue init kocal/vue-web-extension#v1 my-extension
-$ cd my-extension
 $ npm install
 $ npm run build
 ```
