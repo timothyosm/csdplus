@@ -19,16 +19,16 @@ import 'quill/dist/quill.bubble.css';
 Vue.use(VueRouter);
 
 export default new VueRouter({
-    routes,
+  routes,
 });
 
 Vue.directive('focus', {
-    inserted: function(el) {
-        el.focus();
-    },
-    update: function(el) {
-        Vue.nextTick(function() {
-            el.focus();
-        })
-    }
-})
+  inserted: function(el) {
+    el.focus();
+  },
+  //  update: function(el) {
+  //       Vue.nextTick(function() {
+  //          el.focus();
+  ///      })
+  //   }
+});
