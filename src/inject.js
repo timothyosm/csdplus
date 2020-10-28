@@ -136,8 +136,6 @@ var readyStateCheckInterval = setInterval(function() {
       }
     }
 
-    console.log('test');
-
     function highlightOld3() {
       if (typeof document.querySelector('#NewGadget13-listBody') != undefined && document.querySelector('#NewGadget13-listBody') != null) {
         let tableCount = document.querySelector('#NewGadget13-listBody').getElementsByClassName('listBodyRow').length;
