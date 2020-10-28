@@ -5,13 +5,8 @@
         <Menu></Menu>
       </el-col>
       <el-col :span="20">
-        <el-card class="box-card">
-          <div slot="header" class="clearfix">
-            <span><i class="el-icon-search"></i>  Ticket & PR Search</span>
-          </div>
           <TicketSearch></TicketSearch>
           <PRSearch></PRSearch>
-        </el-card>
         <el-card id="lastBox" class="box-card">
           <div slot="header" class="clearfix">
             <span><i class="el-icon-document-copy"></i>  Smart Replies</span>

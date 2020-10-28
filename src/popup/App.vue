@@ -50,9 +50,6 @@ body {
   margin-bottom: 0rem !important;
 }
 
-.el-form-item__label {
-  margin-top: 0.625rem;
-}
 #replyEdit {
   height: 6.25rem;
 }
@@ -61,5 +58,23 @@ body {
 }
 a:link {
   text-decoration: none;
+}
+
+#popUp > div > div.el-col.el-col-20 > div:nth-child(1) > form > div:nth-child(1) > div > input {
+  background-color: #fff;
+  background-image: none;
+  border-radius: 4px;
+  border: 1px solid #dcdfe6;
+  box-sizing: border-box;
+  color: #606266;
+  display: inline-block;
+  font-size: inherit;
+  outline: 0;
+  padding: 0 15px;
+  transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  width: 100%;
+  border-color: #c0c4cc;
+  height: 28px;
+  line-height: 28px;
 }
 </style>

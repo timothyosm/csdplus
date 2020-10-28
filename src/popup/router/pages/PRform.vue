@@ -178,79 +178,75 @@
             <div id="formCont">
               <div v-if="prForm.customerOrganisationName !== ''">
                 <h3>Customer Organisation Name</h3>
-                <p>{{ prForm.customerOrganisationName }}</p>
+                <div>{{ prForm.customerOrganisationName }}</div>
               </div>
               <div v-if="prForm.analystName !== ''">
                 <h3>Analyst Name</h3>
-                <p>{{ prForm.analystName }}</p>
+                <div>{{ prForm.analystName }}</div>
               </div>
               <div v-if="prForm.date !== ''">
                 <h3>Replication Date</h3>
-                <p>{{ prForm.date }}</p>
+                <div>{{ prForm.date }}</div>
               </div>
               <div v-if="prForm.productVersion !== ''">
                 <h3>Product Version</h3>
-                <p>{{ prForm.productVersion }}</p>
+                <div>{{ prForm.productVersion }}</div>
               </div>
               <div v-if="prForm.version !== ''">
                 <h3>Product Version</h3>
-                <p>{{ prForm.version }}</p>
+                <div>{{ prForm.version }}</div>
               </div>
               <div v-if="prForm.module !== ''">
                 <h3>Module</h3>
-                <p>{{ prForm.module }}</p>
+                <div>{{ prForm.module }}</div>
               </div>
               <div v-if="prForm.otherModule !== ''">
                 <h3>Other Module</h3>
-                <p>{{ prForm.otherModule }}</p>
+                <div>{{ prForm.otherModule }}</div>
               </div>
               <div v-if="prForm.loginUserProfile !== ''">
                 <h3>Login User Profile</h3>
-                <p>{{ prForm.loginUserProfile }}</p>
+                <div>{{ prForm.loginUserProfile }}</div>
               </div>
               <div v-if="prForm.impactedUsers !== ''">
                 <h3>Impacted Users</h3>
-                <p>{{ prForm.impactedUsers }}</p>
-              </div>
-              <div v-if="prForm.impactedUsers !== ''">
-                <h3>Impacted Users</h3>
-                <p>{{ prForm.impactedUsers }}</p>
+                <div>{{ prForm.impactedUsers }}</div>
               </div>
               <div v-if="prForm.link !== ''">
                 <h3>Link</h3>
-                <p>{{ prForm.link }}</p>
+                <div>{{ prForm.link }}</div>
               </div>
               <div v-if="prForm.enviroment !== ''">
                 <h3>Enviroment</h3>
-                <p>{{ prForm.enviroment }}</p>
+                <div>{{ prForm.enviroment }}</div>
               </div>
               <div v-if="prForm.otherEnviroment !== ''">
                 <h3>Other Enviroment</h3>
-                <p>{{ prForm.otherEnviroment }}</p>
+                <div>{{ prForm.otherEnviroment }}</div>
               </div>
               <div v-if="prForm.qaTested !== ''">
                 <h3>Tested in QA?</h3>
-                <p>{{ prForm.qaTested }}</p>
+                <div>{{ prForm.qaTested }}</div>
               </div>
               <div v-if="prForm.title !== ''">
                 <h3>Title</h3>
-                <p>{{ prForm.title }}</p>
+                <div>{{ prForm.title }}</div>
               </div>
               <div v-if="prForm.description !== ''">
                 <h3>Description</h3>
-                <p v-html="prForm.description"></p>
+                <div v-html="prForm.description"></div>
               </div>
               <div v-if="prForm.systemInfo !== ''">
                 <h3>System Info</h3>
-                <p v-html="prForm.systemInfo"></p>
+                <div v-html="prForm.systemInfo"></div>
               </div>
               <div v-if="prForm.expectedOutcome !== ''">
                 <h3>Expected Outcome</h3>
-                <p v-html="prForm.expectedOutcome"></p>
+                <div v-html="prForm.expectedOutcome"></div>
               </div>
               <div v-if="prForm.actualOutcome !== ''">
                 <h3>Actual Outcome</h3>
-                <p v-html="prForm.actualOutcome"></p>
+                <div v-html="prForm.actualOutcome"></div>
               </div>
             </div>
           </el-card>

@@ -1,7 +1,7 @@
 {
     "name": "CSDPLUS",
-    "version": "1.0.0",
-    "description": "A Vue.js web extension",
+    "version": "1.9.2",
+    "description": "CSD+",
     "author": "Timothy Osmond <45649121+timothyosm@users.noreply.github.com>",
     "engines": {
         "node": ">=10"
@@ -23,6 +23,7 @@
     "dependencies": {
         "element-ui": "^2.13.2",
         "vue": "^2.6.10",
+        "vue-autofocus-directive": "^1.0.4",
         "vue-i18n": "^8.21.1",
         "vue-quill-editor": "^3.0.6",
         "vue-router": "^3.0.1",

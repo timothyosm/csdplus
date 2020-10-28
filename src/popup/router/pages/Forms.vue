@@ -8,7 +8,7 @@
         <el-card class="box-card">
           <div slot="header" class="clearfix">
             <span style="font-size: 14px;">Problem Record</span>
-            <el-link style="float: right; margin: 3px" type="success" target="_target" href="chrome-extension://cobkanfkhegpngapchpdlehnffpjjcnc/popup/popup.html#/PRform"
+            <el-link style="float: right; margin: 3px" type="success" target="_target" href="/popup/popup.html#/PRform"
               >Go to Form</el-link
             >
           </div>

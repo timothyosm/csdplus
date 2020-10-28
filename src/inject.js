@@ -54,7 +54,7 @@ var readyStateCheckInterval = setInterval(function() {
                     .querySelector(a)
                     .getElementsByClassName("listBodyRow").length;
 
-                for (i = 0; i < tableCount; i++) {
+                for (let i = 0; i < tableCount; i++) {
                     let activeTickets = document
                         .querySelector(a)
                         .getElementsByClassName("listBodyRow")[i].getElementsByClassName("listBodyCell")[b].innerHTML;
@@ -89,7 +89,7 @@ var readyStateCheckInterval = setInterval(function() {
                     .getElementById("NewGadget5-listBody")
                     .getElementsByClassName("listBodyRow").length;
                 let activeTickercounter = 0;
-                for (i = 0; i < totalTickets; i++) {
+                for (let i = 0; i < totalTickets; i++) {
                     let ticketCount = document
                         .getElementById("NewGadget5-listBody")
                         .getElementsByClassName("listBodyRow")[i].getElementsByClassName("listBodyCell")[3].innerHTML;
@@ -115,7 +115,7 @@ var readyStateCheckInterval = setInterval(function() {
                 let tableCount = document
                     .querySelector("#NewGadget5-listBody")
                     .getElementsByClassName("listBodyRow").length;
-                for (i = 0; i < tableCount; i++) {
+                for (let i = 0; i < tableCount; i++) {
                     var date1 = document
                         .querySelector("#NewGadget5-listBody")
                         .getElementsByClassName("listBodyRow")[i].getElementsByClassName("listBodyCell")[9]
@@ -148,7 +148,7 @@ var readyStateCheckInterval = setInterval(function() {
                 let tableCount = document
                     .querySelector("#NewGadget12-listBody")
                     .getElementsByClassName("listBodyRow").length;
-                for (i = 0; i < tableCount; i++) {
+                for (let i = 0; i < tableCount; i++) {
                     var date1 = document
                         .querySelector("#NewGadget12-listBody")
                         .getElementsByClassName("listBodyRow")[i].getElementsByClassName("listBodyCell")[17]
@@ -177,7 +177,7 @@ var readyStateCheckInterval = setInterval(function() {
                 let tableCount = document
                     .querySelector("#NewGadget13-listBody")
                     .getElementsByClassName("listBodyRow").length;
-                for (i = 0; i < tableCount; i++) {
+                for (let i = 0; i < tableCount; i++) {
                     var date1 = document
                         .querySelector("#NewGadget13-listBody")
                         .getElementsByClassName("listBodyRow")[i].getElementsByClassName("listBodyCell")[17]
@@ -206,7 +206,7 @@ var readyStateCheckInterval = setInterval(function() {
                 let tableCount = document
                     .querySelector("#NewGadget15-listBody")
                     .getElementsByClassName("listBodyRow").length;
-                for (i = 0; i < tableCount; i++) {
+                for (let i = 0; i < tableCount; i++) {
                     var date1 = document
                         .querySelector("#NewGadget15-listBody")
                         .getElementsByClassName("listBodyRow")[i].getElementsByClassName("listBodyCell")[8]
@@ -235,7 +235,7 @@ var readyStateCheckInterval = setInterval(function() {
                 let tableCount = document
                     .querySelector("#NewGadget5-listBody")
                     .getElementsByClassName("listBodyRow").length;
-                for (i = 0; i < tableCount; i++) {
+                for (let i = 0; i < tableCount; i++) {
                     var date1 = document
                         .querySelector("#NewGadget5-listBody")
                         .getElementsByClassName("listBodyRow")[i].getElementsByClassName("listBodyCell")[9]
@@ -270,7 +270,7 @@ var readyStateCheckInterval = setInterval(function() {
                 let tableCount = document
                     .querySelector("#NewGadget5-listBody")
                     .getElementsByClassName("listBodyRow").length;
-                for (i = 0; i < tableCount; i++) {
+                for (let i = 0; i < tableCount; i++) {
 
                     if (document
                         .querySelector("#NewGadget5-listBody")
@@ -292,7 +292,7 @@ var readyStateCheckInterval = setInterval(function() {
             let checker = document.getElementsByTagName("iframe");
 
             if (typeof checker != undefined && checker != null) {
-                for (i = 0; i < document.getElementsByTagName("iframe").length; i++) {
+                for (let i = 0; i < document.getElementsByTagName("iframe").length; i++) {
                     var iframeHeight =
                         document.getElementsByTagName("iframe")[i].contentWindow.document.body.scrollHeight + "px";
 
