@@ -52,7 +52,7 @@ export default {
             formTicket.Details.trim() +
             '&cd5=End%20User&c5=' +
             formTicket.endUser.trim() +
-            'test&cd6=Creation%20Date&cd7=Last%20Updated&cd8=Last%20Updated%20By&cd9=Customer%20Name&c9=' +
+            '&cd6=Creation%20Date&cd7=Last%20Updated&cd8=Last%20Updated%20By&cd9=Customer%20Name&c9=' +
             //  New above and old infront '&cd8=Last%20Updated%20By&cd10=Category%202&cd11=Category%203&cd12=Current%20Assigned%20Group&cd14=Customer%20Name&c14=' +
             formTicket.customerName.trim()
           // rest of url &cd10=Service%20&cd11=Category%201&cd12=Category%202&cd13=Category%203&cd14=Current%20Assigned%20Group&cd15=Current%20Assigned%20User&cd16=Customer%20Ref
