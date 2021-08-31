@@ -10,20 +10,56 @@
             size="mini"
             id="formItem"
             prop="customerOrganisationName"
-            label="Customer Organisation Name"
-            :rules="[{ required: true, message: 'Please input a Customer Organisation Name', trigger: 'blur' }]"
+            label="Customer URL"
+            :rules="[{ required: true, message: 'Please input a Customer URL', trigger: 'blur' }]"
           >
             <el-input v-model="prForm.customerOrganisationName"></el-input>
           </el-form-item>
 
-          <el-form-item size="mini" id="formItem" prop="analystName" label="Analyst Name" :rules="[{ required: true, message: 'Please input an Analyst Name', trigger: 'blur' }]">
-            <el-input v-model="prForm.analystName"></el-input>
+          <el-form-item size="mini" id="formItem" prop="analystName" label="Customer login profile (if not the Civica user)">
+            <!--v-model="prForm.analystName" -->
+            <el-input
+              placeholder="User login details if the incident is specific to a user/login. Borrower details – ID/password where applicable on customers TEST/LIVE system if only replicated onsite. If not supply the QA borrower (ID/password) used to repeat the bug"
+              v-model="prForm.analystName"
+              type="textarea"
+            ></el-input>
+          </el-form-item>
+          <!--    <el-form-item size="mini" prop="date" label="Replication Date" :rules="[{ required: true, message: 'Please input a Replication Date', trigger: 'blur' }]">
+            <el-date-picker type="date" placeholder="Pick a date" v-model="prForm.date" style="width: 100%;"></el-date-picker>
+          </el-form-item> -->
+          <el-form-item size="mini" label="Number of Impacted Users" prop="impactedUsers">
+            <el-radio-group v-model="prForm.impactedUsers" size="mini" style="width: 100%;">
+              <el-radio border label="One"></el-radio>
+              <el-radio border label="Multiple"></el-radio>
+              <el-radio border label="All"></el-radio>
+            </el-radio-group>
           </el-form-item>
 
-          <el-form-item size="mini" prop="date" label="Replication Date" :rules="[{ required: true, message: 'Please input a Replication Date', trigger: 'blur' }]">
-            <el-date-picker type="date" placeholder="Pick a date" v-model="prForm.date" style="width: 100%;"></el-date-picker>
+          <!-- <el-form-item size="mini" prop="link" label="Link" :rules="[{ required: true, message: 'Please input a Link', trigger: 'blur' }]">
+            <el-input v-model="prForm.link"></el-input>
+          </el-form-item> -->
+
+          <el-form-item
+            size="mini"
+            label="Environment"
+            prop="enviroment"
+            :rules="[{ required: true, message: 'Customer product and version information must be added to Defective Version field on CSD problem ticket', trigger: 'blur' }]"
+          >
+            <el-radio-group v-model="prForm.enviroment" size="mini" style="width: 100%;">
+              <el-radio border label="Live"></el-radio>
+              <el-radio border label="Test"></el-radio>
+              <el-radio border label="Other"></el-radio>
+            </el-radio-group>
           </el-form-item>
-          <h2>Version and Site Information</h2>
+
+          <el-form-item size="mini" prop="otherEnviroment" label="Other Enviroment" v-if="prForm.enviroment === 'Other'">
+            <el-input v-model="prForm.otherEnviroment"></el-input>
+          </el-form-item>
+
+          <h2>QA Information</h2>
+          <!-- Version and Site Information -->
+
+          <!--
           <el-form-item size="mini" label="Product Version">
             <el-select v-model="prForm.productVersion" placeholder="please select the Product Version" style="width: 100%;">
               <el-option label="Spydus WBA (W10.x)" value="Spydus WBA (W10.x)"></el-option>
@@ -43,7 +79,8 @@
           <el-form-item size="mini" prop="version" label="Version">
             <el-input @change="percentagecalc(prform)" v-model="prForm.version"></el-input>
           </el-form-item>
-
+-->
+          <!--
           <el-form-item size="mini" label="Module">
             <el-select v-model="prForm.module" placeholder="please select the Module" style="width: 100%;">
               <el-option label="Acquisitions" value="Acquisitions"></el-option>
@@ -73,44 +110,21 @@
           <el-form-item size="mini" prop="otherModule" label="Other Module" v-if="prForm.module === 'Other'">
             <el-input v-model="prForm.otherModule"></el-input>
           </el-form-item>
-
-          <el-form-item size="mini" prop="loginUserProfile" label="Login User Profile">
-            <el-input
-              placeholder="User login details if the incident is specific to a user/login. Borrower details – ID/password where applicable on customers TEST/LIVE system if only replicated onsite. If not supply the QA borrower (ID/password) used to repeat the bug."
-              v-model="prForm.loginUserProfile"
-              type="textarea"
-            ></el-input>
-          </el-form-item>
-
-          <el-form-item size="mini" label="Number of Impacted Users" prop="impactedUsers">
-            <el-radio-group v-model="prForm.impactedUsers" size="mini" style="width: 100%;">
-              <el-radio border label="One"></el-radio>
-              <el-radio border label="Multiple"></el-radio>
-              <el-radio border label="All"></el-radio>
-            </el-radio-group>
-          </el-form-item>
-
-          <el-form-item size="mini" prop="link" label="Link" :rules="[{ required: true, message: 'Please input a Link', trigger: 'blur' }]">
-            <el-input v-model="prForm.link"></el-input>
-          </el-form-item>
-
-          <el-form-item size="mini" label="Enviroment" prop="enviroment">
-            <el-radio-group v-model="prForm.enviroment" size="mini" style="width: 100%;">
-              <el-radio border label="Live"></el-radio>
-              <el-radio border label="Test"></el-radio>
-              <el-radio border label="Other"></el-radio>
-            </el-radio-group>
-          </el-form-item>
-
-          <el-form-item size="mini" prop="otherEnviroment" label="Other Enviroment" v-if="prForm.enviroment === 'Other'">
-            <el-input v-model="prForm.otherEnviroment"></el-input>
-          </el-form-item>
+-->
 
           <el-form-item size="mini" label="Tested in QA?" prop="qaTested" :rules="[{ required: true, message: 'Please Specify if this was tested in QA', trigger: 'blur' }]">
             <el-radio-group v-model="prForm.qaTested" size="mini" style="width: 100%;">
               <el-radio border label="Yes"></el-radio>
               <el-radio border label="No"></el-radio>
             </el-radio-group>
+          </el-form-item>
+
+          <el-form-item size="mini" prop="loginUserProfile" label="QA URLs tested in:">
+            <el-input
+              placeholder="QA URL/s tested in. Please test in Web App (Production tree) to verify the bug can be replicated as well as Web App (customer installed). The Production tree will be the next available patch."
+              v-model="prForm.loginUserProfile"
+              type="textarea"
+            ></el-input>
           </el-form-item>
         </el-col>
 
@@ -157,7 +171,7 @@
             />
           </el-form-item>
 
-          <el-form-item size="mini" prop="actualOutcome" label="Actual Outcome" :rules="[{ required: true, message: 'Please input Actual Outcome', trigger: 'blur' }]">
+          <!--       <el-form-item size="mini" prop="actualOutcome" label="Actual Outcome" :rules="[{ required: true, message: 'Please input Actual Outcome', trigger: 'blur' }]">
             <quill-editor
               style="margin-top:50px;"
               ref="myQuillEditor"
@@ -167,7 +181,7 @@
               @focus="onEditorFocus($event)"
               @ready="onEditorReady($event)"
             />
-          </el-form-item>
+          </el-form-item> -->
         </el-col>
         <el-col :span="8">
           <el-card class="box-card">
@@ -177,17 +191,17 @@
 
             <div id="formCont">
               <div v-if="prForm.customerOrganisationName !== ''">
-                <h3>Customer Organisation Name</h3>
+                <h3>Customer URL</h3>
                 <div>{{ prForm.customerOrganisationName }}</div>
               </div>
               <div v-if="prForm.analystName !== ''">
-                <h3>Analyst Name</h3>
+                <h3>Customer login profile:</h3>
                 <div>{{ prForm.analystName }}</div>
               </div>
-              <div v-if="prForm.date !== ''">
+              <!--              <div v-if="prForm.date !== ''">
                 <h3>Replication Date</h3>
                 <div>{{ prForm.date }}</div>
-              </div>
+              </div> -->
               <div v-if="prForm.productVersion !== ''">
                 <h3>Product Version</h3>
                 <div>{{ prForm.productVersion }}</div>
@@ -204,10 +218,7 @@
                 <h3>Other Module</h3>
                 <div>{{ prForm.otherModule }}</div>
               </div>
-              <div v-if="prForm.loginUserProfile !== ''">
-                <h3>Login User Profile</h3>
-                <div>{{ prForm.loginUserProfile }}</div>
-              </div>
+
               <div v-if="prForm.impactedUsers !== ''">
                 <h3>Impacted Users</h3>
                 <div>{{ prForm.impactedUsers }}</div>
@@ -217,16 +228,20 @@
                 <div>{{ prForm.link }}</div>
               </div>
               <div v-if="prForm.enviroment !== ''">
-                <h3>Enviroment</h3>
+                <h3>Environment</h3>
                 <div>{{ prForm.enviroment }}</div>
               </div>
               <div v-if="prForm.otherEnviroment !== ''">
-                <h3>Other Enviroment</h3>
+                <h3>Other Environment</h3>
                 <div>{{ prForm.otherEnviroment }}</div>
               </div>
               <div v-if="prForm.qaTested !== ''">
                 <h3>Tested in QA?</h3>
                 <div>{{ prForm.qaTested }}</div>
+              </div>
+              <div v-if="prForm.loginUserProfile !== ''">
+                <h3>Login User Profile</h3>
+                <div>{{ prForm.loginUserProfile }}</div>
               </div>
               <div v-if="prForm.title !== ''">
                 <h3>Title</h3>
