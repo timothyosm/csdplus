@@ -119,7 +119,7 @@
             </el-radio-group>
           </el-form-item>
 
-          <el-form-item size="mini" prop="loginUserProfile" label="QA URLs tested in:">
+          <el-form-item size="mini" prop="loginUserProfile" label="QA URLs tested in:" :rules="[{ required: true, message: 'Please list the URLs tested', trigger: 'blur' }]">
             <el-input
               placeholder="QA URL/s tested in. Please test in Web App (Production tree) to verify the bug can be replicated as well as Web App (customer installed). The Production tree will be the next available patch."
               v-model="prForm.loginUserProfile"
@@ -146,7 +146,7 @@
               @ready="onEditorReady($event)"
             />
           </el-form-item>
-
+          <!--
           <el-form-item size="mini" prop="systemInfo" label="System Info" :rules="[{ required: true, message: 'Please input System Info', trigger: 'blur' }]">
             <quill-editor
               style="margin-top:50px;"
@@ -157,7 +157,7 @@
               @focus="onEditorFocus($event)"
               @ready="onEditorReady($event)"
             />
-          </el-form-item>
+          </el-form-item> -->
 
           <el-form-item size="mini" prop="expectedOutcome" label="Expected Outcome" :rules="[{ required: true, message: 'Please input Expected Outcome', trigger: 'blur' }]">
             <quill-editor
