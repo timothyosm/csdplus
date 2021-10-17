@@ -1,7 +1,7 @@
 {
   "name": "CSD+",
   "description": "An extension to expand the functionality of the CSD",
-  "version": "1.9.6",
+  "version": "1.9.7",
   "manifest_version": 2,
   "homepage_url": "https://timothyosmond.com",
   "icons": {
