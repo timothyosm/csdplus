@@ -1,6 +1,6 @@
 <template>
   <div id="container">
-    <h1>PR Ticket Form</h1>
+    <h1>Library PR Form</h1>
 
     <el-form :model="prForm" ref="form">
       <el-row :gutter="20">
