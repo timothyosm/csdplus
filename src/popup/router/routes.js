@@ -3,10 +3,11 @@ import Forms from './pages/forms';
 import PRform from './pages/PRform';
 import ReplyEntry from './pages/components/replyEntry';
 import Edit from './pages/components/edit';
+import EDUform from './pages/EDUform';
+import LGform from './pages/EDUform';
 
-
-
-export default [{
+export default [
+  {
     path: '/',
     component: PageIndex,
   },
@@ -18,7 +19,14 @@ export default [{
     path: '/PRform',
     component: PRform,
   },
-
+  {
+    path: '/EDUform',
+    component: EDUform,
+  },
+  {
+    path: '/LGform',
+    component: EDUform,
+  },
   {
     path: '/replyEntry',
     component: ReplyEntry,
@@ -27,6 +35,4 @@ export default [{
     path: '/edit',
     component: Edit,
   },
-
-
 ];
