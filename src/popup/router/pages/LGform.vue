@@ -1,6 +1,6 @@
 <template>
   <div id="container">
-    <h1>Local G PR Form</h1>
+    <h1>Authority Problem Form</h1>
 
     <el-form :model="LGForm" ref="form">
       <el-row :gutter="20">
@@ -55,9 +55,9 @@
           <el-form-item size="mini" prop="otherEnviroment" label="Other Enviroment" v-if="prForm.enviroment === 'Other'">
             <el-input v-model="prForm.otherEnviroment"></el-input>
           </el-form-item>
-
+          <!--
           <h2>QA Information</h2>
-          <!-- Version and Site Information -->
+           Version and Site Information -->
 
           <!--
           <el-form-item size="mini" label="Product Version">
@@ -111,21 +111,6 @@
             <el-input v-model="prForm.otherModule"></el-input>
           </el-form-item>
 -->
-
-          <el-form-item size="mini" label="Tested in QA?" prop="qaTested" :rules="[{ required: true, message: 'Please Specify if this was tested in QA', trigger: 'blur' }]">
-            <el-radio-group v-model="prForm.qaTested" size="mini" style="width: 100%;">
-              <el-radio border label="Yes"></el-radio>
-              <el-radio border label="No"></el-radio>
-            </el-radio-group>
-          </el-form-item>
-
-          <el-form-item size="mini" prop="loginUserProfile" label="QA URLs tested in:" :rules="[{ required: true, message: 'Please list the URLs tested', trigger: 'blur' }]">
-            <el-input
-              placeholder="QA URL/s tested in. Please test in Web App (Production tree) to verify the bug can be replicated as well as Web App (customer installed). The Production tree will be the next available patch."
-              v-model="prForm.loginUserProfile"
-              type="textarea"
-            ></el-input>
-          </el-form-item>
         </el-col>
 
         <el-col :span="8">
@@ -171,7 +156,7 @@
             />
           </el-form-item>
 
-          <!--       <el-form-item size="mini" prop="actualOutcome" label="Actual Outcome" :rules="[{ required: true, message: 'Please input Actual Outcome', trigger: 'blur' }]">
+          <el-form-item size="mini" prop="actualOutcome" label="Actual Outcome" :rules="[{ required: true, message: 'Please input Actual Outcome', trigger: 'blur' }]">
             <quill-editor
               style="margin-top:50px;"
               ref="myQuillEditor"
@@ -181,7 +166,7 @@
               @focus="onEditorFocus($event)"
               @ready="onEditorReady($event)"
             />
-          </el-form-item> -->
+          </el-form-item>
         </el-col>
         <el-col :span="8">
           <el-card class="box-card">
