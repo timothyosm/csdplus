@@ -25,7 +25,7 @@ export default [
   },
   {
     path: '/LGform',
-    component: EDUform,
+    component: LGform,
   },
   {
     path: '/replyEntry',
