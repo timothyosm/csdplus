@@ -4,7 +4,7 @@ import PRform from './pages/PRform';
 import ReplyEntry from './pages/components/replyEntry';
 import Edit from './pages/components/edit';
 import EDUform from './pages/EDUform';
-import LGform from './pages/LGform';
+import LGform from './pages/EDUform';
 
 export default [
   {
@@ -25,7 +25,7 @@ export default [
   },
   {
     path: '/LGform',
-    component: LGform,
+    component: EDUform,
   },
   {
     path: '/replyEntry',
