@@ -23,7 +23,7 @@
           <div>Use this form when creating a problem record.</div>
         </el-card>
       </el-col>
-
+      <!--
       <el-col :span="20">
         <el-card class="box-card">
           <div slot="header" class="clearfix">
@@ -33,6 +33,7 @@
           <div>Use this form when creating a problem record.</div>
         </el-card>
       </el-col>
+-->
     </el-row>
   </div>
 </template>
