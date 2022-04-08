@@ -1,6 +1,6 @@
 <template>
   <div id="container">
-    <h1>Education PR Form</h1>
+    <h1>CES Problem Form</h1>
 
     <el-form :model="EDUForm" ref="form">
       <el-row :gutter="20">

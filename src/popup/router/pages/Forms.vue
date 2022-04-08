@@ -7,7 +7,7 @@
       <el-col :span="20">
         <el-card class="box-card">
           <div slot="header" class="clearfix">
-            <span style="font-size: 14px;">Library PR</span>
+            <span style="font-size: 14px;">Spydus Problem Form</span>
             <el-link style="float: right; margin: 3px" type="success" target="_target" href="/popup/popup.html#/PRform">Go to Form</el-link>
           </div>
           <div>Use this form when creating a problem record.</div>
@@ -17,7 +17,7 @@
       <el-col :span="20">
         <el-card class="box-card">
           <div slot="header" class="clearfix">
-            <span style="font-size: 14px;">Education PR</span>
+            <span style="font-size: 14px;">CES Problem Form</span>
             <el-link style="float: right; margin: 3px" type="success" target="_target" href="/popup/popup.html#/EDUform">Go to Form</el-link>
           </div>
           <div>Use this form when creating a problem record.</div>
@@ -27,7 +27,7 @@
       <el-col :span="20">
         <el-card class="box-card">
           <div slot="header" class="clearfix">
-            <span style="font-size: 14px;">Local Gov PR</span>
+            <span style="font-size: 14px;">Authority Problem Form</span>
             <el-link style="float: right; margin: 3px" type="success" target="_target" href="/popup/popup.html#/LGform">Go to Form</el-link>
           </div>
           <div>Use this form when creating a problem record.</div>
